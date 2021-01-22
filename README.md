@@ -14,6 +14,11 @@ useful tools, where to find information and much more.
 _Our first regular teaching day is  Wednesday January 20 at 3pm_.  We look
 forward to meet you all and hope you will enjoy the course.
 
+We have also created a Slack channel, see 
+https://join.slack.com/t/physics321msu/shared_invite/zt-lkk1d8ow-TfGnTeH647zlonyHFOg~Dw
+
+Similarly, we would appreciate it if you could fill in the survey here
+https://docs.google.com/forms/d/1pBpu8spHQaRM0vsL0ljTI1_lwclUg3UBeNBhnDE97-Q/edit
 
 
 
@@ -99,6 +104,7 @@ For solving this exercise, AMS chapters 2 and 4 are very useful as review materi
 
 - Monday 1/18: MLK day, no lecture
 - Wednesday 1/20: Getting started and overview of course. JRT chapters 1.2 and 1.3 and lecture notes (https://mhjensen.github.io/Physics321/doc/pub/week2/html/week2.html). AMS chapters 2 and 4 are very useful. 1st homework due January 25.
+Video of Lecture at https://mediaspace.msu.edu/media/t/1_xwtfo4i1  (some minor problems in the beginning of video).
 - Friday 1/22: Forces and Newton's laws of motion. Free fall problems. JRT chapter 1.4 and lecture notes (https://mhjensen.github.io/Physics321/doc/pub/week3/html/week3.html). AMS chapters 2 and 4 are very useful Homework 1 is due on January 25 (Monday). 
 - Solution to homeworks are in https://d2l.msu.edu/ and are posted here as well.
 
