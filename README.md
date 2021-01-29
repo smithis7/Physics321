@@ -106,14 +106,19 @@ For solving this exercise, AMS chapters 2 and 4 are very useful as review materi
 - Wednesday 1/20: Getting started and overview of course. JRT chapters 1.2 and 1.3 and lecture notes (https://mhjensen.github.io/Physics321/doc/pub/week2/html/week2.html). AMS chapters 2 and 4 are very useful. 1st homework due January 25.
 Video of Lecture at https://mediaspace.msu.edu/media/t/1_xwtfo4i1  (some minor problems in the beginning of video).
 - Friday 1/22: Forces and Newton's laws of motion. Free fall problems. JRT chapter 1.4 and lecture notes (https://mhjensen.github.io/Physics321/doc/pub/week3/html/week3.html). AMS chapters 2 and 4 are very useful Homework 1 is due on January 25 (Monday). 
+Video of lecture at https://mediaspace.msu.edu/media/t/1_ajqd2f42.
+Handwritten notes at https://github.com/mhjensen/Physics321/blob/master/doc/HandWrittenNotes/Spring2021/NotesJan22.pdf
 - Solution to homeworks are in https://d2l.msu.edu/ and are posted here as well.
 
 ### Week 4, January 25-29, 2021
-- Monday 1/25: Motion and forces, Newton's laws, examples, 2nd homework, due February 1 
+- Monday 1/25: Motion and forces, Newton's laws, examples, 2nd homework, due February 1.
+Video of lecture at https://mediaspace.msu.edu/media/t/1_7pyc0yts and handwritten notes at https://github.com/mhjensen/Physics321/blob/master/doc/HandWrittenNotes/Spring2021/NotesJan25.pdf
 - Wednesday 1/27: Motion and forces, Newton's laws, examples
+Video of lecture https://mediaspace.msu.edu/media/t/1_k2acom08 and handwritten notes at https://github.com/mhjensen/Physics321/blob/master/doc/HandWrittenNotes/Spring2021/NotesJan27.pdf
 - Friday 1/29: Motion and forces, Newton's laws, examples
 - Solution to homeworks are in https://d2l.msu.edu/
 - Good reads are Taylor chapters 1.4, 1.5, 1.6, 2.1-2.4 and AMS chapters 4.2 and  5
+- Solutions to homework 1 at https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw1.ipynb and videos at https://www.youtube.com/playlist?list=PLq9LZ5390Us41TX42XzOPIEPcbHaqX8Hx
 
 ### Week 5, February 1-5, 2021
 - Monday 2/1: Work and energy conservation, 3rd homework, due February 8
