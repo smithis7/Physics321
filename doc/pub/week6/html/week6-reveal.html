@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PHY321: Conservative Forces, Momentum and Angular Momentum conservation">
+
+<title>PHY321: Conservative Forces, Momentum and Angular Momentum conservation</title>
+
+
+
+
+
+
+
+<!-- reveal.js: https://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+    hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .reveal .alert-text-small   { font-size: 80%;  }
+    .reveal .alert-text-large   { font-size: 130%; }
+    .reveal .alert-text-normal  { font-size: 90%;  }
+    .reveal .alert {
+             padding:8px 35px 8px 14px; margin-bottom:18px;
+             text-shadow:0 1px 0 rgba(255,255,255,0.5);
+             border:5px solid #bababa;
+             -webkit-border-radius: 14px; -moz-border-radius: 14px;
+             border-radius:14px;
+             background-position: 10px 10px;
+             background-repeat: no-repeat;
+             background-size: 38px;
+             padding-left: 30px; /* 55px; if icon */
+     }
+     .reveal .alert-block {padding-top:14px; padding-bottom:14px}
+     .reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+     /*.reveal .alert li {margin-top: 1em}*/
+     .reveal .alert-block p+p {margin-top:5px}
+     /*.reveal .alert-notice { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+     .reveal .alert-summary  { background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+     .reveal .alert-warning { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+     .reveal .alert-question {background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+
+</style>
+
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+<body>
+<div class="reveal">
+
+<!-- Any section element inside the <div class="slides"> container
+     is displayed as a slide -->
+
+<div class="slides">
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+    
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+
+
+
+<center><h1 style="text-align: center;">PHY321: Conservative Forces, Momentum and Angular Momentum conservation</h1></center>  <!-- document title -->
+
+<p>
+<!-- author(s): <a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a> -->
+
+<center>
+<b><a href="http://mhjgit.github.io/info/doc/web/" target="_blank">Morten Hjorth-Jensen</a></b> [1, 2]
+</center>
+
+<p>&nbsp;<br>
+<!-- institution(s) -->
+
+<center>[1] <b>Department of Physics and Astronomy and Facility for Rare Ion Beams (FRIB), Michigan State University, USA</b></center>
+<center>[2] <b>Department of Physics, University of Oslo, Norway</b></center>
+<br>
+<p>&nbsp;<br>
+<center><h4>Feb 19, 2021</h4></center> <!-- date -->
+<br>
+<p>
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 1999-2021, "Morten Hjorth-Jensen":"http://mhjgit.github.io/info/doc/web/". Released under CC Attribution-NonCommercial 4.0 license
+</center>
+</section>
+
+
+<section>
+<h2 id="aims-and-overarching-motivation">Aims and Overarching Motivation </h2>
+
+<h3 id="monday">Monday </h3>
+
+<p>
+Short repetition from last week. Discussion of momentum and angular momentum.
+Reading suggestion: Taylor sections 3.1-3.4
+
+<h3 id="wednesday">Wednesday </h3>
+
+<p>
+More on angular momentum, Taylor sections 3.4 and 3.5. Discussion of potential energy and conservative forces.
+Reading suggestions: Taylor section 4.2
+
+<h3 id="friday">Friday </h3>
+
+<p>
+Conservative forces and potential energy. Reading suggestion: Taylor sections 4.2-4.4
+
+<p>
+If you wish to read more about conservative forces or not, Feyman's lectures from 1963 are quite interesting.
+He states for example that <b>All fundamental forces in nature appear to be conservative</b>.
+This statement was made while developing his argument that <em>there are no nonconservative forces</em>.
+You may enjoy the link to <a href="http://www.feynmanlectures.caltech.edu/I_14.html" target="_blank">Feynman's lecture</a>.
+</section>
+
+
+<section>
+<h2 id="work-energy-theorem-and-energy-conservation">Work-Energy Theorem and Energy Conservation  </h2>
+
+<p>
+Last week (Friday) we observed that energy was conserved for a force which
+depends only on the position.
+In particular we considered a force acting on a block 
+attached to a spring with spring
+constant \( k \). The other end of the spring was attached to the wall.
+
+<p>
+The force \( F_x \) from the spring on the block was defined as
+<p>&nbsp;<br>
+$$
+F_x=-kx.
+$$
+<p>&nbsp;<br>
+
+<p>
+The work done on the block due to a displacement from a position \( x_0 \) to \( x \) 
+<p>&nbsp;<br>
+$$
+W=\int_{x_0}^{x}F_xdx'=\frac{1}{2}kx_0^2-\frac{1}{2}kx^2.
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="conservation-of-energy">Conservation of energy </h2>
+With the definition of the work-energy theorem in terms of the kinetic energy we obtained
+
+<p>&nbsp;<br>
+$$
+W=\frac{1}{2}mv^2(x)-\frac{1}{2}mv_0^2=\frac{1}{2}kx_0^2-\frac{1}{2}kx^2,
+$$
+<p>&nbsp;<br>
+
+which we rewrote as
+
+<p>&nbsp;<br>
+$$
+\frac{1}{2}mv^2(x)+\frac{1}{2}kx^2=\frac{1}{2}mv_0^2+\frac{1}{2}kx_0^2.
+$$
+<p>&nbsp;<br>
+
+<p>
+The total energy, which is the sum of potential and kinetic energy, is conserved.
+We will analyze this interesting result now in more detail when we study energy, momentum and angular momentum conservation.
+
+<p>
+But before we start with energy conservation, conservative forces and potential energies, we need to revisit our definitions of momentum and angular momentum.
+</section>
+
+
+<section>
+<h2 id="what-is-a-conservative-force">What is a Conservative Force? </h2>
+
+<p>
+A conservative force is a force whose property is that the total work
+done in moving an object between two points is independent of the
+taken path. This means that the work on an object under the influence
+of a conservative force, is independent on the path of the object. It
+depends only on the spatial degrees of freedom and it is possible to
+assign a numerical value for the potential at any point. It leads to
+conservation of energy. The gravitational force is an example of a
+conservative force.
+</section>
+
+
+<section>
+<h2 id="two-important-conditions">Two important conditions </h2>
+
+<p>
+First, a conservative force depends only on the spatial degrees of freedom. This is a necessary condition for obtaining a path integral which is independent of path.
+The  important condition for the final work to be independent of the path is that the <b>curl</b> of the force is zero, that
+is
+<p>&nbsp;<br>
+$$
+\boldsymbol{\nabla} \times \boldsymbol{F}=0
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="work-energy-theorem-to-show-that-energy-is-conserved-with-a-conservative-force">Work-energy theorem to show that energy is conserved with a conservative force </h2>
+
+<p>
+The work-energy theorem states that the work done \( W \) by a force \( \boldsymbol{F} \) that moves an object from a position \( \boldsymbol{r}_0 \) to a new position \( \boldsymbol{r}_1 \)
+<p>&nbsp;<br>
+$$
+W=\int_{\boldsymbol{r}_0}^{\boldsymbol{r}_1}\boldsymbol{F}\boldsymbol{dr}=\frac{1}{2}mv_1^2-\frac{1}{2}mv_0^2,
+$$
+<p>&nbsp;<br>
+
+where \( v_1^2 \) is the velocity squared at a time \( t_1 \) and \( v_0^2 \) the corresponding quantity at a time \( t_0 \).
+The work done is thus the difference in kinetic energies. We can rewrite the above equation as
+<p>&nbsp;<br>
+$$
+\frac{1}{2}mv_1^2=\int_{\boldsymbol{r}_0}^{\boldsymbol{r}_1}\boldsymbol{F}\boldsymbol{dr}+\frac{1}{2}mv_0^2,
+$$
+<p>&nbsp;<br>
+
+that is the final kinetic energy is equal to the initial kinetic energy plus the work done by the force over a given path from a  position \( \boldsymbol{r}_0 \) at time \( t_0 \) to a final position position \( \boldsymbol{r}_1 \) at a later time \( t_1 \).
+</section>
+
+
+<section>
+<h2 id="conservation-of-momentum">Conservation of Momentum </h2>
+
+<p>
+Before we move on however, we need to remind ourselves about important aspects like the linear momentum and angular momentum. After these considerations, we move back to more details about conservatives forces.
+
+<p>
+Assume we have \( N \) objects, each with velocity \( \boldsymbol{v}_i \) with
+\( i=1,2,\dots,N \) and mass \( m_i \). The momentum of each object is
+\( \boldsymbol{p}_i=m\boldsymbol{v}_i \) and the total linear (or mechanical) momentum is
+defined as
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{P}=\sum_{i=1}^N\boldsymbol{p}_i=\sum_{i=1}^Nm_i\boldsymbol{v}_i,
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="two-objects-first">Two objects first </h2>
+
+<p>
+Let us assume we have two objects only that interact with each other and are influenced by an external force.
+
+<p>
+We define also the total net force acting on object 1 as
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}_1^{\mathrm{net}}=\boldsymbol{F}_1^{\mathrm{ext}}+\boldsymbol{F}_{12},
+$$
+<p>&nbsp;<br>
+
+<p>
+where \( \boldsymbol{F}_1^{\mathrm{ext}} \) is the external force
+(for example the force due to an electron moving in an electromagnetic field) and \( \boldsymbol{F}_{12} \) is the
+force between object one and two. Similarly for object 2 we have
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}_2^{\mathrm{net}}=\boldsymbol{F}_2^{\mathrm{ext}}+\boldsymbol{F}_{21}.
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="newton-s-third-law">Newton's Third Law </h2>
+
+<p>
+Newton's third law which we met earlier states that <b>for every action there is an equal and opposite reaction</b>.
+It is more accurately stated as
+
+<p>
+<b>if two bodies exert forces on each other, these forces are equal in magnitude and opposite in direction</b>.
+
+<p>
+This means that for two bodies \( i \) and \( j \), if the force on \( i \) due to \( j \) is called \( \boldsymbol{F}_{ij} \), then
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\boldsymbol{F}_{ij}=-\boldsymbol{F}_{ji}. 
+\tag{1}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+For the abovementioned two objects we have thus \( \boldsymbol{F}_{12}=-\boldsymbol{F}_{21} \).
+</section>
+
+
+<section>
+<h2 id="newton-s-second-law-and-momentum">Newton's Second Law and Momentum </h2>
+
+<p>
+With the net forces acting on each object we can now related the momentum to the forces via
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}_1^{\mathrm{net}}=m_1\boldsymbol{a}_i=m_1\frac{d\boldsymbol{v}_i}{dt}=\boldsymbol{F}_1^{\mathrm{ext}}+\boldsymbol{F}_{12},
+$$
+<p>&nbsp;<br>
+
+<p>
+and
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}_2^{\mathrm{net}}=m_2\boldsymbol{a}_2=m_1\frac{d\boldsymbol{v}_i}{dt}=\boldsymbol{F}_2^{\mathrm{ext}}+\boldsymbol{F}_{21}.
+$$
+<p>&nbsp;<br>
+
+<p>
+Recalling our definition for the linear momentum we have then
+
+<p>&nbsp;<br>
+$$
+\frac{d\boldsymbol{p}_1}{dt}=\boldsymbol{F}_1^{\mathrm{ext}}+\boldsymbol{F}_{12},
+$$
+<p>&nbsp;<br>
+
+<p>
+and
+
+<p>&nbsp;<br>
+$$
+\frac{d\boldsymbol{p}_2}{dt}=\boldsymbol{F}_2^{\mathrm{ext}}+\boldsymbol{F}_{21}.
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="the-total-momentum">The total Momentum </h2>
+
+<p>
+The total momentum \( \boldsymbol{P} \) is defined as the sum of the individual momenta, meaning that we can rewrite
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}_1^{\mathrm{net}}+\boldsymbol{F}_2^{\mathrm{net}}=\frac{d\boldsymbol{p}_1}{dt}+\frac{d\boldsymbol{p}_2}{dt}=\frac{d\boldsymbol{P}}{dt},
+$$
+<p>&nbsp;<br>
+
+<p>
+that is the derivate with respect to time of the total momentum. If we now
+write the net forces as sums of the external plus internal forces
+between the objects we have
+
+<p>&nbsp;<br>
+$$
+\frac{d\boldsymbol{P}}{dt}=\boldsymbol{F}_1^{\mathrm{ext}}+\boldsymbol{F}_{12}+\boldsymbol{F}_2^{\mathrm{ext}}+\boldsymbol{F}_{21}=\boldsymbol{F}_1^{\mathrm{ext}}+\boldsymbol{F}_2^{\mathrm{ext}}.
+$$
+<p>&nbsp;<br>
+
+<p>
+The derivative of the total momentum is just <b>the sum of the external
+forces</b>. If we assume that the external forces are zero and that only
+internal (here two-body forces) are at play, we obtain the important
+result that the derivative of the total momentum is zero. This means
+again that the total momentum is a constant of the motion and
+conserved quantity. This is a very important result that we will use
+in many applications to come.
+</section>
+
+
+<section>
+<h2 id="newton-s-second-law">Newton's Second Law </h2>
+
+<p>
+Let us now general to several objects \( N \) and let us also assume that there are no external forces. We will label such a system as <b>an isolated system</b>.
+
+<p>
+Newton's second law, \( \boldsymbol{F}=m\boldsymbol{a} \), can be written for a particle \( i \) as
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\boldsymbol{F}_i=\sum_{j\ne i}^N \boldsymbol{F}_{ij}=m_i\boldsymbol{a}_i,
+\tag{2}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+where \( \boldsymbol{F}_i \) (a single subscript) denotes the net force acting on \( i \) from the other objects/particles.
+Because the mass of \( i \) is fixed and we assume it does not change with time, one can see that
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\boldsymbol{F}_i=\frac{d}{dt}m_i\boldsymbol{v}_i=\sum_{j\ne i}^N\boldsymbol{F}_{ij}.
+\tag{3}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="summing-over-all-objects-particles">Summing over all Objects/Particles </h2>
+
+<p>
+Now, one can sum over all the objects/particles and obtain
+
+<p>&nbsp;<br>
+$$
+\frac{d}{dt}\sum_i m_iv_i=\sum_{ij, i\ne j}^N\boldsymbol{F}_{ij}=0.
+$$
+<p>&nbsp;<br>
+
+<p>
+How did we arrive at the last step?  We rewrote the double sum as
+
+<p>&nbsp;<br>
+$$
+\sum_{ij, i\ne j}^N\boldsymbol{F}_{ij}=\sum_i^N\sum_{j>i}\left(\boldsymbol{F}_{ij}+\boldsymbol{F}_{ji}\right),
+$$
+<p>&nbsp;<br>
+
+<p>
+and using Newton's third law which states that
+\( \boldsymbol{F}_{ij}=-\boldsymbol{F}_{ji} \), we obtain that the net sum over all  the two-particle
+forces is zero when we only consider so-called <b>internal forces</b>.
+Stated differently, the last step made use of the fact that for every
+term \( ij \), there is an equivalent term \( ji \) with opposite
+force. Because the momentum is defined as \( m\boldsymbol{v} \), for a system of
+particles, we have thus
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\frac{d}{dt}\sum_im_i\boldsymbol{v}_i=0,~~{\rm for~isolated~particles}.
+\tag{4}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="conservation-of-total-momentum">Conservation of total Momentum </h2>
+
+<p>
+By "isolated" one means that the only force acting on any particle \( i \)
+are those originating from other particles in the sum, i.e. &quot;no
+external&quot; forces. Thus, Newton's third law leads to the conservation
+of total momentum,
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{P}=\sum_i m_i\boldsymbol{v}_i,
+$$
+<p>&nbsp;<br>
+
+and we have
+<p>&nbsp;<br>
+$$
+\frac{d}{dt}\boldsymbol{P}=0.
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="example-rocket-science">Example: Rocket Science </h2>
+
+<p>
+Consider a rocket of mass \( M \) moving with velocity \( v \). After a
+brief instant, the velocity of the rocket is \( v+\Delta v \) and the mass
+is \( M-\Delta M \). Momentum conservation gives
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray*}
+Mv&=&(M-\Delta M)(v+\Delta v)+\Delta M(v-v_e)\\
+0&=&-\Delta Mv+M\Delta v+\Delta M(v-v_e),\\
+0&=&M\Delta v-\Delta Mv_e.
+\end{eqnarray*}
+$$
+<p>&nbsp;<br>
+
+<p>
+In the second step we ignored the term \( \Delta M\Delta v \) because it is doubly small. The last equation gives
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+\Delta v&=&\frac{v_e}{M}\Delta M,\\
+\nonumber
+\frac{dv}{dt}&=&\frac{v_e}{M}\frac{dM}{dt}.
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="integrating-the-equations">Integrating the Equations </h2>
+
+<p>
+Integrating the expression with lower limits \( v_0=0 \) and \( M_0 \), one finds
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray*}
+v&=&v_e\int_{M_0}^M \frac{dM'}{M'}\\
+v&=&v_e\ln(M/M_0)\\
+&=&v_e\ln[(M_0-\alpha t)/M_0].
+\end{eqnarray*}
+$$
+<p>&nbsp;<br>
+
+<p>
+Because the total momentum of an isolated system is constant, one can
+also quickly see that the center of mass of an isolated system is also
+constant. The center of mass is the average position of a set of
+masses weighted by the mass,
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\bar{x}=\frac{\sum_im_ix_i}{\sum_i m_i}.
+\tag{5}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="rate-of-change">Rate of Change </h2>
+
+<p>
+The rate of change of \( \bar{x} \) is
+
+<p>&nbsp;<br>
+$$
+\dot{\bar{x}}=\frac{1}{M}\sum_i m_i\dot{x}_i=\frac{1}{M}P_x.
+$$
+<p>&nbsp;<br>
+
+<p>
+Thus if the total momentum is constant the center of mass moves at a
+constant velocity, and if the total momentum is zero the center of
+mass is fixed.
+</section>
+
+
+<section>
+<h2 id="conservation-of-angular-momentum">Conservation of Angular Momentum </h2>
+
+<p>
+The angular momentum is defined as
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}=m\boldsymbol{r}\times\boldsymbol{v}.
+\tag{6}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+It means that the angular momentum is perpendicular to the plane defined by position \( \boldsymbol{r} \) and the momentum \( \boldsymbol{p} \) via \( \boldsymbol{r}\times \boldsymbol{p} \).
+</section>
+
+
+<section>
+<h2 id="rate-of-change-of-angular-momentum">Rate of Change of Angular Momentum </h2>
+
+<p>
+The rate of change of the angular momentum is
+
+<p>&nbsp;<br>
+$$
+\frac{d\boldsymbol{L}}{dt}=m\boldsymbol{v}\times\boldsymbol{v}+m\boldsymbol{r}\times\dot{\boldsymbol{v}}=\boldsymbol{r}\times{\boldsymbol{F}}
+$$
+<p>&nbsp;<br>
+
+<p>
+The first term is zero because \( \boldsymbol{v} \) is parallel to itself, and the
+second term defines the so-called torque. If \( \boldsymbol{F} \) is parallel to \( \boldsymbol{r} \) then the torque is zero and we say that angular momentum is conserved.
+
+<p>
+If the force is not radial, \( \boldsymbol{r}\times\boldsymbol{F}\ne 0 \) as above, and angular momentum is no longer conserved,
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\frac{d\boldsymbol{L}}{dt}=\boldsymbol{r}\times\boldsymbol{F}\equiv\boldsymbol{\tau},
+\tag{7}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>
+where \( \boldsymbol{\tau} \) is the torque.
+</section>
+
+
+<section>
+<h2 id="the-torque-example-1-hw-4-exercise-4">The Torque, Example 1 (hw 4, exercise 4) </h2>
+
+<p>
+Let us assume we have an initial position \( \boldsymbol{r}_0=x_0\boldsymbol{e}_1+y_0\boldsymbol{e}_2 \) at a time \( t_0=0 \).
+We add now a force in the positive \( x \)-direction
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}=F_x\boldsymbol{e}_1=\frac{d\boldsymbol{p}}{dt},
+$$
+<p>&nbsp;<br>
+
+where we used the force as defined by the time derivative of the momentum.
+
+<p>
+We can use this force (and its pertinent acceleration) to find the velocity via the relation
+<p>&nbsp;<br>
+$$
+\boldsymbol{v}(t)=\boldsymbol{v}_0+\int_{t_0}^t\boldsymbol{a}dt',
+$$
+<p>&nbsp;<br>
+
+and with \( \boldsymbol{v}_0=0 \) we have
+<p>&nbsp;<br>
+$$
+\boldsymbol{v}(t)=\int_{t_0}^t\frac{\boldsymbol{F}}{m}dt',
+$$
+<p>&nbsp;<br>
+
+where \( m \) is the mass of the object.
+</section>
+
+
+<section>
+<h2 id="the-torque-example-1-hw-4-exercise-4">The Torque, Example 1 (hw 4, exercise 4) </h2>
+
+<p>
+Since the force acts only in the \( x \)-direction, we have after integration
+<p>&nbsp;<br>
+$$
+\boldsymbol{v}(t)=\frac{\boldsymbol{F}}{m}t=\frac{F_x}{m}t\boldsymbol{e}_1=v_x(t)\boldsymbol{e}_1.
+$$
+<p>&nbsp;<br>
+
+<p>
+The momentum is in turn given by \( \boldsymbol{p}=p_x\boldsymbol{e}_1=mv_x\boldsymbol{e}_1=F_xt\boldsymbol{e}_1 \).
+
+<p>
+Integrating over time again we find the final position as (note the force depends only on the \( x \)-direction)
+<p>&nbsp;<br>
+$$
+\boldsymbol{r}(t)=(x_0+\frac{1}{2}\frac{F_x}{m}t^2) \boldsymbol{e}_1+y_0\boldsymbol{e}_2.
+$$
+<p>&nbsp;<br>
+
+There is no change in the position in the \( y \)-direction since the force acts only in the \( x \)-direction.
+</section>
+
+
+<section>
+<h2 id="the-torque-example-1-hw-4-exercise-4">The Torque, Example 1 (hw 4, exercise 4) </h2>
+
+<p>
+We can now compute the angular momentum given by
+<p>&nbsp;<br>
+$$
+\boldsymbol{l}=\boldsymbol{r}\times\boldsymbol{p}=\left[(x_0+\frac{1}{2}\frac{F_x}{m}t^2) \boldsymbol{e}_1+y_0\boldsymbol{e}_2\right]\times F_xt\boldsymbol{e}_1.
+$$
+<p>&nbsp;<br>
+
+Computing the cross product we find
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{l}=-y_0F_xt\boldsymbol{e}_3=-y_0F_xt\boldsymbol{e}_z.
+$$
+<p>&nbsp;<br>
+
+The torque is the time derivative of the angular momentum and we have
+
+<p>&nbsp;<br>
+$$
+\boldsymbol{\tau}=-y_0F_x\boldsymbol{e}_3=-y_0F_x\boldsymbol{e}_z.
+$$
+<p>&nbsp;<br>
+
+The torque is non-zero and angular momentum is not conserved.
+</section>
+
+
+<section>
+<h2 id="the-torque-example-2">The Torque, Example 2 </h2>
+
+<p>
+One can write the torque about a given axis, which we will denote as \( \hat{z} \), in polar coordinates, where
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+x&=&r\sin\theta\cos\phi,~~y=r\sin\theta\cos\phi,~~z=r\cos\theta,
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+
+to find the \( z \) component of the torque,
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+\tau_z&=&xF_y-yF_x\\
+\nonumber
+&=&-r\sin\theta\left\{\cos\phi \partial_y-\sin\phi \partial_x\right\}V(x,y,z).
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="chain-rule-and-partial-derivatives">Chain Rule and Partial Derivatives </h2>
+
+<p>
+One can use the chain rule to write the partial derivative w.r.t. \( \phi \) (keeping \( r \) and \( \theta \) fixed),
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+\partial_\phi&=&\frac{\partial x}{\partial\phi}\partial_x+\frac{\partial_y}{\partial\phi}\partial_y
++\frac{\partial z}{\partial\phi}\partial_z\\
+\nonumber
+&=&-r\sin\theta\sin\phi\partial_x+\sin\theta\cos\phi\partial_y.
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+
+<p>
+Combining the two equations,
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+\tau_z&=&-\partial_\phi V(r,\theta,\phi).
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+
+<p>
+Thus, if the potential is independent of the azimuthal angle \( \phi \),
+there is no torque about the \( z \) axis and \( L_z \) is conserved.
+</section>
+
+
+<section>
+<h2 id="system-of-isolated-particles">System of Isolated Particles </h2>
+
+<p>
+For a system of isolated particles, one can write
+
+<p>&nbsp;<br>
+$$
+\begin{eqnarray}
+\frac{d}{dt}\sum_i\boldsymbol{L}_i&=&\sum_{i\ne j}\boldsymbol{r}_i\times \boldsymbol{F}_{ij}\\
+\nonumber
+&=&\frac{1}{2}\sum_{i\ne j} \boldsymbol{r}_i\times \boldsymbol{F}_{ij}+\boldsymbol{r}_j\times\boldsymbol{F}_{ji}\\
+\nonumber
+&=&\frac{1}{2}\sum_{i\ne j} (\boldsymbol{r}_i-\boldsymbol{r}_j)\times\boldsymbol{F}_{ij}=0,
+\end{eqnarray}
+$$
+<p>&nbsp;<br>
+
+<p>
+where the last step used Newton's third law,
+\( \boldsymbol{F}_{ij}=-\boldsymbol{F}_{ji} \). If the forces between the particles are
+radial, i.e. \( \boldsymbol{F}_{ij} ~||~ (\boldsymbol{r}_i-\boldsymbol{r}_j) \), then each term in
+the sum is zero and the net angular momentum is fixed. Otherwise, you
+could imagine an isolated system that would start spinning
+spontaneously.
+</section>
+
+
+<section>
+<h2 id="work-energy-momentum-and-conservation-laws">Work, Energy, Momentum and Conservation laws </h2>
+
+<p>
+Energy conservation is most convenient as a strategy for addressing
+problems where time does not appear. For example, a particle goes
+from position \( x_0 \) with speed \( v_0 \), to position \( x_f \); what is its
+new speed? However, it can also be applied to problems where time
+does appear, such as in solving for the trajectory \( x(t) \), or
+equivalently \( t(x) \).
+</section>
+
+
+<section>
+<h2 id="energy-conservation">Energy Conservation </h2>
+Energy is conserved in the case where the potential energy, \( V(\boldsymbol{r}) \), depends only on position, and not on time. The force is determined by \( V \),
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\boldsymbol{F}(\boldsymbol{r})=-\boldsymbol{\nabla} V(\boldsymbol{r}).
+\tag{8}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="conservative-forces">Conservative forces </h2>
+
+<p>
+We say a force is conservative if it satisfies the following conditions:
+
+<ol>
+<p><li> The force \( \boldsymbol{F} \) acting on an object only depends on the position \( \boldsymbol{r} \), that is \( \boldsymbol{F}=\boldsymbol{F}(\boldsymbol{r}) \).</li>
+<p><li> For any two points \( \boldsymbol{r}_1 \) and \( \boldsymbol{r}_2 \), the work done by the force \( \boldsymbol{F} \) on the displacement between these two points is independent of the path taken.</li>
+<p><li> Finally, the <b>curl</b> of the force is zero \( \boldsymbol{\nabla}\times\boldsymbol{F}=0 \).</li>
+</ol>
+</section>
+
+
+<section>
+<h2 id="forces-and-potentials">Forces and Potentials </h2>
+
+<p>
+The energy \( E \) of a given system is defined as the sum of kinetic and potential energies,
+<p>&nbsp;<br>
+$$
+E=K+V(\boldsymbol{r}).
+$$
+<p>&nbsp;<br>
+
+<p>
+We define the potential energy at a point \( \boldsymbol{r} \) as the negative work done from a starting point \( \boldsymbol{r}_0 \) to a final point \( \boldsymbol{r} \)
+
+<p>&nbsp;<br>
+$$
+V(\boldsymbol{r})=-W(\boldsymbol{r}_0\rightarrow\boldsymbol{r})= -\int_{\boldsymbol{r}_0}^{\boldsymbol{r}}d\boldsymbol{r}'\boldsymbol{F}(\boldsymbol{r}').
+$$
+<p>&nbsp;<br>
+
+If the potential depends on the path taken between these two points there is no unique potential.
+</section>
+
+
+<section>
+<h2 id="example-relevant-for-homework-5">Example (relevant for homework 5) </h2>
+
+<p>
+We study a classical electron which moves in the \( x \)-direction along a surface. The force from the surface is
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}(x)=-F_0\sin{(\frac{2\pi x}{b})}\boldsymbol{e}_1.
+$$
+<p>&nbsp;<br>
+
+The constant \( b \) represents the distance between atoms at the surface of the material, \( F_0 \) is a constant and \( x \) is the position of the electron.
+
+<p>
+This is indeed a conservative force since it depends only on position
+and its <b>curl</b> is zero, that is \( -\boldsymbol{\nabla}\times \boldsymbol{F}=0 \). This means that energy is conserved and the
+integral over the work done by the force is independent of the path
+taken. We will come back to this in more detail next week.
+</section>
+
+
+<section>
+<h2 id="example-continues">Example Continues </h2>
+
+<p>
+Using the work-energy theorem we can find the work \( W \) done when
+moving an electron from a position \( x_0 \) to a final position \( x \)
+through the integral
+
+<p>&nbsp;<br>
+$$
+W=-\int_{x_0}^x \boldsymbol{F}(x')dx' =  \int_{x_0}^x F_0\sin{(\frac{2\pi x'}{b})} dx',
+$$
+<p>&nbsp;<br>
+
+which results in
+<p>&nbsp;<br>
+$$
+W=\frac{F_0b}{2\pi}\left[\cos{(\frac{2\pi x}{b})}-\cos{(\frac{2\pi x_0}{b})}\right].
+$$
+<p>&nbsp;<br>
+
+Since this is related to the change in kinetic energy we have, with \( v_0 \) being the initial velocity at a  time \( t_0 \),
+<p>&nbsp;<br>
+$$
+v  = \pm\sqrt{\frac{2}{m}\frac{F_0b}{2\pi}\left[\cos{(\frac{2\pi x}{b})}-\cos{(\frac{2\pi x_0}{b})}\right]+v_0^2}.
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="the-potential-energy-from-this-example">The potential energy from this example </h2>
+
+<p>
+The potential energy, due to energy conservation is
+<p>&nbsp;<br>
+$$
+V(x)=V(x_0)+\frac{1}{2}mv_0^2-\frac{1}{2}mv^2,
+$$
+<p>&nbsp;<br>
+
+with \( v \) given by the velocity from above.
+
+<p>
+We can now, in order to find a more explicit expression for the
+potential energy at a given value \( x \), define a zero level value for
+the potential. The potential is defined, using the work-energy
+theorem, as
+
+<p>&nbsp;<br>
+$$
+V(x)=V(x_0)+\int_{x_0}^x (-F(x'))dx',
+$$
+<p>&nbsp;<br>
+
+<p>
+and if you recall the definition of the indefinite integral, we can rewrite this as
+
+<p>&nbsp;<br>
+$$
+V(x)=\int (-F(x'))dx'+C,
+$$
+<p>&nbsp;<br>
+
+<p>
+where \( C \) is an undefined constant. The force is defined as the
+gradient of the potential, and in that case the undefined constant
+vanishes. The constant does not affect the force we derive from the
+potential.
+
+<p>
+We have then
+<p>&nbsp;<br>
+$$
+V(x)=V(x_0)-\int_{x_0}^x \boldsymbol{F}(x')dx',
+$$
+<p>&nbsp;<br>
+
+which results in
+<p>&nbsp;<br>
+$$
+V(x)=\frac{F_0b}{2\pi}\left[\cos{(\frac{2\pi x}{b})}-\cos{(\frac{2\pi x_0}{b})}\right]+V(x_0).
+$$
+<p>&nbsp;<br>
+
+We can now define
+<p>&nbsp;<br>
+$$
+\frac{F_0b}{2\pi}\cos{(\frac{2\pi x_0}{b})}=V(x_0),
+$$
+<p>&nbsp;<br>
+
+which gives 
+<p>&nbsp;<br>
+$$
+V(x)=\frac{F_0b}{2\pi}\left[\cos{(\frac{2\pi x}{b})}\right].
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="force-and-potential">Force and Potential </h2>
+
+<p>
+We have defined work as the energy resulting from a net force acting
+on an object (or sseveral objects), that is
+
+<p>&nbsp;<br>
+$$
+W(\boldsymbol{r}\rightarrow \boldsymbol{r}+d\boldsymbol{r})= \boldsymbol{F}(\boldsymbol{r})d\boldsymbol{r}.
+$$
+<p>&nbsp;<br>
+
+<p>
+If we write out this for each component we have
+
+<p>&nbsp;<br>
+$$
+W(\boldsymbol{r}\rightarrow \boldsymbol{r}+d\boldsymbol{r})=\boldsymbol{F}(\boldsymbol{r})d\boldsymbol{r}=F_xdx+F_ydy+F_zdz.
+$$
+<p>&nbsp;<br>
+
+<p>
+The work done from an initial position to a final one defines also the difference in potential energies
+
+<p>&nbsp;<br>
+$$
+W(\boldsymbol{r}\rightarrow \boldsymbol{r}+d\boldsymbol{r})=-\left[V(\boldsymbol{r}+d\boldsymbol{r})-V(\boldsymbol{r})\right].
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="getting-to-boldsymbol-f-boldsymbol-r-boldsymbol-nabla-v-boldsymbol-r">Getting to \( \boldsymbol{F}(\boldsymbol{r})=-\boldsymbol{\nabla} V(\boldsymbol{r}) \) </h2>
+
+<p>
+We can write out the differences in potential energies as
+
+<p>&nbsp;<br>
+$$
+V(\boldsymbol{r}+d\boldsymbol{r})-V(\boldsymbol{r})=V(x+dx,y+dy,z+dz)-V(x,y,z)=dV,
+$$
+<p>&nbsp;<br>
+
+and using the expression the differential of a multi-variable function \( f(x,y,z) \) 
+<p>&nbsp;<br>
+$$
+df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz,
+$$
+<p>&nbsp;<br>
+
+we can write the expression for the work done as
+<p>&nbsp;<br>
+$$
+W(\boldsymbol{r}\rightarrow \boldsymbol{r}+d\boldsymbol{r})=-dV=-\left[\frac{\partial V}{\partial x}dx+\frac{\partial V}{\partial y}dy+\frac{\partial V}{\partial z}dz \right].
+$$
+<p>&nbsp;<br>
+</section>
+
+
+<section>
+<h2 id="final-expression">Final expression </h2>
+
+<p>
+Comparing the last equation with 
+<p>&nbsp;<br>
+$$
+W(\boldsymbol{r}\rightarrow \boldsymbol{r}+d\boldsymbol{r})=F_xdx+F_ydy+F_zdz,
+$$
+<p>&nbsp;<br>
+
+we have
+<p>&nbsp;<br>
+$$
+F_xdx+F_ydy+F_zdz=-\left[\frac{\partial V}{\partial x}dx+\frac{\partial V}{\partial y}dy+\frac{\partial V}{\partial z}dz \right],
+$$
+<p>&nbsp;<br>
+
+<p>
+leading to
+<p>&nbsp;<br>
+$$
+F_x=-\frac{\partial V}{\partial x},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+F_y=-\frac{\partial V}{\partial y},
+$$
+<p>&nbsp;<br>
+
+and
+<p>&nbsp;<br>
+$$
+F_z=-\frac{\partial V}{\partial z},
+$$
+<p>&nbsp;<br>
+
+or just
+<p>&nbsp;<br>
+$$
+\boldsymbol{F}=-\frac{\partial V}{\partial x}\boldsymbol{e}_1-\frac{\partial V}{\partial y}\boldsymbol{e}_2-\frac{\partial V}{\partial z}\boldsymbol{e}_3=-\boldsymbol{\nabla}V(\boldsymbol{r}).
+$$
+<p>&nbsp;<br>
+
+And this connection is the one we wanted to show.
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+    // Display navigation controls in the bottom right corner
+    controls: true,
+
+    // Display progress bar (below the horiz. slider)
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: true,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    //center: true,
+    center: false,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+    theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+    dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+        // Interpret Markdown in <section> elements
+        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Speaker notes
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // Remote control your reveal.js presentation using a touch device
+        //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+        // MathJax
+        //{ src: 'reveal.js/plugin/math/math.js', async: true }
+    ]
+});
+
+Reveal.initialize({
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1170,  // original: 960,
+    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+     end footer logo -->
+
+
+
+</body>
+</html>

@@ -2,6 +2,13 @@ TITLE: Overview of course material: Physics 321, Classical Mechanics
 AUTHOR: Department of Physics and Astronomy, Michigan State University, USA
 
 
+===== Lecture notes as Jupyter-book =====
+
+ * "The Jupyter-Book":"https://mhjensen.github.io/Physics321/doc/LectureNotes/_build/html"
+
+
+
+
 
 
 
@@ -19,7 +26,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week2/pdf/week2-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week2/pdf/week2.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week2/html/week2.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week2/html/week2-reveal.html"
@@ -34,7 +41,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week3/pdf/week3-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week3/pdf/week3.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week3/html/week3.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week3/html/week3-reveal.html"
@@ -49,7 +56,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week4/pdf/week4-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week4/pdf/week4.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week4/html/week4.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week4/html/week4-reveal.html"
@@ -58,13 +65,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week4/ipynb/week4.ipynb"
 
 
-===== Week 5 February 1-5: Conserving Forces =====
+===== Week 5 February 1-5: Additional motion examples and forces. Work and Energy =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week5/pdf/week5-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week5/pdf/week5.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week5/html/week5.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week5/html/week5-reveal.html"
@@ -73,13 +80,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week5/ipynb/week5.ipynb"
 
 
-===== Week 6 February 8-12: More on Conservative Forces and Harmonic motion =====
+===== Week 6 February 8-12: Conservative Forces, Momentum and Angular Momentum conservation =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week6/pdf/week6-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week6/pdf/week6.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week6/html/week6.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week6/html/week6-reveal.html"
@@ -88,13 +95,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week6/ipynb/week6.ipynb"
 
 
-===== Week 7 February 15-19: Damped and Harmonic motion =====
+===== Week 7 February 15-19: Conservation laws =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week7/pdf/week7-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week7/pdf/week7.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week7/html/week7.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week7/html/week7-reveal.html"
@@ -103,13 +110,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week7/ipynb/week7.ipynb"
 
 
-===== Week 8 February 22-26: Numerical Studies of Harmonic motion =====
+===== Week 8 February 22-26: Harmonic Oscillations =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week8/pdf/week8-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week8/pdf/week8.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week8/html/week8.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week8/html/week8-reveal.html"
@@ -118,13 +125,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week8/ipynb/week8.ipynb"
 
 
-===== Week 9 March 1-5: Two-body problems and Central Forces =====
+===== Week 9 March 1-5: Harmonic oscillations and damped motion =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week9/pdf/week9-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week9/pdf/week9.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week9/html/week9.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week9/html/week9-reveal.html"
@@ -133,13 +140,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week9/ipynb/week9.ipynb"
 
 
-===== Week 10 March 8-12: Two-body problems and Central Forces =====
+===== Week 10 March 8-12: Fourier Series and start Two-body problems and Central Forces =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week10/pdf/week10-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week10/pdf/week10.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week10/html/week10.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week10/html/week10-reveal.html"
@@ -154,7 +161,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week11/pdf/week11-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week11/pdf/week11.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week11/html/week11.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week11/html/week11-reveal.html"
@@ -163,13 +170,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week11/ipynb/week11.ipynb"
 
 
-===== Week 12 March 22-26: Non-inertial Frames, Translation and Rotating Coordinate Systems =====
+===== Week 12 March 22-26: Two-body problems and Central Forces =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week12/pdf/week12-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week12/pdf/week12.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week12/html/week12.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week12/html/week12-reveal.html"
@@ -178,13 +185,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week12/ipynb/week12.ipynb"
 
 
-===== Week 13 March 29- April 2: Non-inertial Frames, Translation and Rotating Coordinate Systems =====
+===== Week 13 March 29-April 2: Two-body problems and scattering =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week13/pdf/week13-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week13/pdf/week13.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week13/html/week13.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week13/html/week13-reveal.html"
@@ -193,13 +200,13 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week13/ipynb/week13.ipynb"
 
 
-===== Week 14 April 5-9:  Lagrangians and the Calculus of Variations =====
+===== Week 14 April 5-9:  Two-body scattering and Lagrangians and the Calculus of Variations =====
 
 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week14/pdf/week14-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week14/pdf/week14.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week14/html/week14.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week14/html/week14-reveal.html"
@@ -214,7 +221,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week15/pdf/week15-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week15/pdf/week15.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week15/html/week15.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week15/html/week15-reveal.html"
@@ -229,7 +236,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
  * LaTeX PDF:
    * For printing:
-     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week16/pdf/week16-minted.pdf"
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week16/pdf/week16.pdf"
  * HTML:
    * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week16/html/week16.html"
    * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week16/html/week16-reveal.html"
@@ -240,11 +247,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
 
 
-!split
-
-===== Homework sets and Midterm projects =====
-
-
+   
 === First homework set, week 2 (Available January 8, due January 25) ===
  * LaTeX and PDF:
      * "LaTex file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw1/pdf/hw1.tex"
@@ -268,8 +271,10 @@ The teaching material is produced in various formats for printing and on-screen 
    * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/Homeworks/hw2/html/hw2-bs.html"
  * Jupyter notebook:
     * "The notebook": "https://mhjensen.github.io/Physics321/doc/Homeworks/hw2/ipynb/hw2.ipynb"
- * Solution as Jupyter notebook:
-    * "Homework3 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw2.ipynb"
+ * Solution for coding part as  Jupyter notebook:
+    * "Homework2 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw2.ipynb"
+ * Solution for analytical part as handwritten note:
+    * "Homework2 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/SolutionHW2Spring2021.pdf"
 
 
 === Third homework set, week 4 (Available January 29, due February 8) ===
@@ -315,7 +320,7 @@ The teaching material is produced in various formats for printing and on-screen 
     * "Homework5 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw5.ipynb"
 
 
-=== Sixth homework set, week 8 (Available February 19, due March 1) ===
+=== Sixth homework set, week 8 (Available February 21, due March 1) ===
  * LaTeX and PDF:
      * "LaTex file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw6/pdf/hw6.tex"
      * "PDF file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw6/pdf/hw6.pdf"
@@ -325,10 +330,10 @@ The teaching material is produced in various formats for printing and on-screen 
  * Jupyter notebook:
     * "The notebook": "https://mhjensen.github.io/Physics321/doc/Homeworks/hw6/ipynb/hw6.ipynb"
  * Solution as Jupyter notebook:
-    * "Homework6 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw6.ipynb"
+    * "Homework6 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhwx.ipynb"
 
 
-=== Seventh homework set, week 11 (Available March 12, due March 22) ===
+=== Seventh homework set, week 11 (Available March 13, due March 22) ===
  * LaTeX and PDF:
      * "LaTex file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw7/pdf/hw7.tex"
      * "PDF file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw7/pdf/hw7.pdf"
@@ -341,7 +346,7 @@ The teaching material is produced in various formats for printing and on-screen 
     * "Homework7 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw7.ipynb"
 
 
-=== Eighth homework set, week 13 (Available March 19, due March 29) ===
+=== Eighth homework set, week 13 (Available March 21, due March 29) ===
  * LaTeX and PDF:
      * "LaTex file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw8/pdf/hw8.tex"
      * "PDF file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw8/pdf/hw8.pdf"
@@ -353,7 +358,7 @@ The teaching material is produced in various formats for printing and on-screen 
  * Solution as Jupyter notebook:
     * "Homework8 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw8.ipynb"
 
-=== Ninth homework set, week 14 (Available March 26, due April 5) ===
+=== Ninth homework set, week 14 (Available March 28, due April 5) ===
  * LaTeX and PDF:
      * "LaTex file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw9/pdf/hw9.tex"
      * "PDF file":"https://mhjensen.github.io/Physics321/doc/Homeworks/hw9/pdf/hw9.pdf"
@@ -376,46 +381,46 @@ The teaching material is produced in various formats for printing and on-screen 
  * Jupyter notebook:
     * "The notebook": "https://mhjensen.github.io/Physics321/doc/Homeworks/hw10/ipynb/hw10.ipynb"
  * Solution as Jupyter notebook:
-    * "Homework10 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhw10.ipynb"
+    * "Homework10 Solution": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionhwx.ipynb"
 
 
 
 
-=== First midterm project, week 9 (Available February 26, due March 12) ===
+=== First midterm project, week 9 (Available February 27(small update on score 2/28), due March 12) ===
  * LaTeX and PDF:
-     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/first/pdf/first.tex"
-     * "PDF file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/first/pdf/first.pdf"
+     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Firstmidterm2021/pdf/Firstmidterm2021.tex"
+     * "PDF file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Firstmidterm2021/pdf/Firstmidterm2021.pdf"
  * HTML:
-   * "Plain html":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/first/html/first.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/first/html/first-bs.html"
+   * "Plain html":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Firstmidterm2021/html/Firstmidterm2021.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/Firstmidterm2021/html/Firstmidterm2021-bs.html"
  * Jupyter notebook:
-    * "The notebook": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/first/ipynb/first.ipynb"
+    * "The notebook": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/Firstmidterm2021/ipynb/Firstmidterm2021.ipynb"
  * Solution as Jupyter notebook:
-    * "Midterm 1,  Solution available March 18": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionfirst.ipynb"
+    * "Midterm 1,  Solution available March 18": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/SolutionFirstMid.ipynb"
 
-=== Second midterm project, week 15 (Available April 4, due April 16) ===
+=== Second midterm project, week 15 (Available April 4/5, due April 18) ===
  * LaTeX and PDF:
-     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/second/pdf/second.tex"
-     * "PDF file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/second/pdf/second.pdf"
+     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Secondmidterm2021/pdf/Secondmidterm2021.tex"
+     * "PDF file":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Secondmidterm2021/pdf/Secondmidterm2021.pdf"
  * HTML:
-   * "Plain html":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/second/html/second.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/second/html/second-bs.html"
+   * "Plain html":"https://mhjensen.github.io/Physics321/doc/MidTermProjects/Secondmidterm2021/html/Secondmidterm2021.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/Secondmidterm2021/html/Secondmidterm2021-bs.html"
  * Jupyter notebook:
-    * "The notebook": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/second/ipynb/second.ipynb"
+    * "The notebook": "https://mhjensen.github.io/Physics321/doc/MidTermProjects/Secondmidterm2021/ipynb/Secondmidterm2021.ipynb"
  * Solution as Jupyter notebook:
-    * "Midterm 2,  Solution available April 28": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionsecond.ipynb"
+    * "Midterm 2,  Solution available April 28": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/solutionSecondmidterm2021x.ipynb"
 
 === Final project, week 17 (Available April 23, due April 30) ===
  * LaTeX and PDF:
-     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/pdf/final.tex"
-     * "PDF file":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/pdf/final.pdf"
+     * "LaTex file":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/pdf/finalx.tex"
+     * "PDF file":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/pdf/finalx.pdf"
  * HTML:
-   * "Plain html":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/html/final.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/FinalProject/final/html/final-bs.html"
+   * "Plain html":"https://mhjensen.github.io/Physics321/doc/FinalProject/final/html/finalx.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices": "https://mhjensen.github.io/Physics321/doc/FinalProject/final/html/final-bsx.html"
  * Jupyter notebook:
-    * "The notebook": "https://mhjensen.github.io/Physics321/doc/FinalProject/final/ipynb/final.ipynb"
+    * "The notebook": "https://mhjensen.github.io/Physics321/doc/FinalProject/final/ipynb/finalx.ipynb"
  * Solution as Jupyter notebook:
-    * "Final Project,  Solution available May 10": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/final.ipynb"
+    * "Final Project,  Solution available May 10": "https://github.com/mhjensen/Physics321/blob/master/doc/src/Homeworks/Solutions/finalx.ipynb"
 
 
 

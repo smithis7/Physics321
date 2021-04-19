@@ -1,5 +1,5 @@
 TITLE: PHY321: Classical Mechanics 1
-AUTHOR: Homework 5, due Monday  February 17
+AUTHOR: Homework 5, due Monday  February 22
 DATE: today
 
 ===  Practicalities about  homeworks and projects ===
@@ -20,14 +20,13 @@ In both textbooks there are many nice worked out examples. Malthe-Sørenssen's t
 The numerical homework focuses on another motion problem where you can
 use the code you developed in homework 4, almost entirely. Please take
 a look at the posted solution (jupyter-notebook) for homework 4. You
-need only to change the forces at play. The problem at hand is again a
-classic one, a block fastened to a spring moving back and forth along the $x$-axis. It is a simpler problem compared to the previous homework. It allows us however to introduce damping (friction) and study more realistic situations. 
+need only to change the forces at play.
 
 
 
 === Exercise 1 (15 pt), Work-energy theorem and conservation laws ===
 
-This exercise was partly discussed during the lectures. It has not yet been edited in the online notes.
+This exercise was partly discussed during the lectures. You can also find it in the online notes from the week of February 15-19.
 We will study a classical electron which moves in the $x$-direction along a surface. The force from the surface is
 !bt
 \[
@@ -44,7 +43,7 @@ Using the work-energy theorem we can find the work $W$ done when moving an elect
 0$ to a final position $x$ through the integral
 !bt
 \[
-W=-\int_{x_0}^x \bm{F}(x')dx' =  \int_{x_0}^x F_0\sin{(\frac{2\pi x'}{b})} dx',
+W=\int_{x_0}^x \bm{F}(x')dx' =  -\int_{x_0}^x F_0\sin{(\frac{2\pi x'}{b})} dx',
 \]
 !et
 which results in
@@ -129,14 +128,15 @@ F0 = 1.0; b = 1.0;
 V = F0*b/(2*pi)*np.cos(2*pi*x/b)
 # Plot position as function of time    
 fig, ax = plt.subplots()
-ax.set_ylabel('x')
-ax.set_xlabel('V')
+ax.set_ylabel('V')
+ax.set_xlabel('x')
 ax.plot(x, V)
 fig.tight_layout()
 plt.show()
 !ec
 
 We have stable equilibrium  points for every minimum of the $\cos$ function and unstable equilibrium points where it has its maximimum values. At the minimum the particle has the lowest potential energy and the largest kinetic energy whereas at the maxima it has the largest potential energy and lowest kinetic energy. 
+
 === Exsercise 2 (15pt), Rocket, Momentum and mass ===
 
 Taylor exercise 3.11.    This exercise was partly discussed during the lectures, see the notes on "Energy and Momentum etc, see the part on Momentum conservation ":"https://mhjensen.github.io/Physics321/doc/pub/energyconserv/html/energyconserv.html". Taylor's chapter 3.2 covers also this example.
@@ -168,20 +168,21 @@ assume it is small. The last equation gives
 \frac{dv}{dt}&=&\frac{v_e}{M}\frac{dM}{dt}.
 \end{eqnarray}
 !et
-
+Here we let $\Delta v\rightarrow dv$ and $\Delta M\rightarrow dM$.
+We have also assumed that $M(t) = M_0-kt$. 
 Integrating the expression with lower limits $v_0=0$ and $M_0$, one finds
 
 !bt
 \begin{eqnarray*}
 v&=&v_e\int_{M_0}^M \frac{dM'}{M'}\\
-v&=&-v_e\ln(M/M_0)\\
-&=&-v_e\ln[(M_0-\alpha t)/M_0].
+v&=&v_e\ln(M/M_0)\\
+&=&v_e\ln[(M_0-k t)/M_0].
 \end{eqnarray*}
 !et
 We have ignored gravity here. If we add gravity as the external force, we get when integrating an additional terms $-gt$, that is
 !bt
 \[
-v=-v_e\ln[(M_0-\alpha t)/M_0]-gt.
+v=v_e\ln[(M_0-k t)/M_0]-gt.
 \]
 !et
 
@@ -209,17 +210,45 @@ which gives
 y(t) = v_et\ln{M_0}-v_e\int_0^t \ln{M(t')}dt'-\frac{1}{2}gt^2.
 \]
 !et
-To do the integral over time we recall that $M(t')=M_0-\Delta M t'$. We assumed that $\Delta M=k$ is a constant. We obtain then that the integral gives
+To do the integral over time we recall that $M(t')=M_0-\Delta M t'$. We assumed that $\Delta M=k$ is a constant.
+We use that $M_0-M=kt$ and assume that mass decreases by a constant $k$ times time $t$.
+
+We obtain then that the integral gives
 !bt
 \[
-\int_0^t \ln{M(t')}dt' = \frac{1}{k}\left(M_0\ln{M_0}-M\ln{M}\right)-t,
+\int_0^t \ln{M(t')}dt' = \int_0^t \ln{(M_0-kt')}dt',
 \]
 !et
-where we used that $M_0-M=kt$. We have assumed that mass decreases by a constant $k$ times time $t$.
+and defining the variable $u=M_0-kt'$, with $du=-kdt'$ and the new limits $M_0$ when $t=0$ and $M_0-kt$ when time is equal to $t$, we have
+!bt
+\[
+\int_0^t \ln{M(t')}dt' = \int_0^t \ln{(M_0-kt')}dt'=-\frac{1}{k}\int_{M_0}^{M_0-kt} \ln{(u)}du=-\frac{1}{k}\left[u\ln{(u)}-u\right]_{M_0}^{M_0-kt},
+\]
+!et
+and writing out we obtain
+!bt
+\[
+-\frac{1}{k}\left[u\ln{(u)}-u\right]_{M_0}^{M_0-kt} = \frac{1}{k}\left(M_0\ln{M_0}-M\ln{M}\right)-t,
+\]
+!et
+Mulitplying with $-v_e$ we have
+!bt
+\[
+-\frac{v_e}{k}\left(M_0\ln{M_0}-M\ln{M}\right)+v_et,
+\]
+!et
+which we can rewrite as, using $M_0=M+kt$, 
+!bt
+\[
+-\frac{v_e}{k}\left((M+kt)\ln{M_0}-M\ln{M}\right)+v_et=v_et-v_et\ln{M_0}-\frac{Mv_e}{k}\ln{(\frac{M_0}{M})}.
+\]
+!et
+
+
 Inserting into $y(t)$ we obtain then
 !bt
 \[
-y(t) = v_et-\frac{1}{2}gt^2-\frac{mv_e}{k}\ln{(\frac{M_0}{M})}.
+y(t) = v_et-\frac{1}{2}gt^2-\frac{Mv_e}{k}\ln{(\frac{M_0}{M})}.
 \]
 !et
 Using the numbers from the previous exercise with $t=2$ min we obtain that $y\approx 40$ km.
@@ -267,277 +296,217 @@ M\bm{R}=\sum_{i=1}^{N_1}m_{1i}\bm{r}_{1i}+\sum_{j=1}^{N_2}m_{2j}\bm{r}_{2j}=M_1\
 !et
 where $\bm{R}_1$ and $\bm{R}_2$ are the the center of mass positions of the two separate bodies and the second equality follows from our rewritten definition of the center of mass applied to each body separately. This is the required result.
 
-===  Exercise 5 (10pt), Sliding Block  and Spring (please not again), Scaling the Equations and getting started with numerical project ===
-The relevant material with codes etc is covered by the "Lecture Notes on Oscillations":"https://mhjensen.github.io/Physics321/doc/pub/harmonic/html/harmonic.html". Taylor's chapter 5, in particular sections 5.1 amd 5.2. 5.4 is relevant for the bonus exercise.
-We start now with our next numerical application with simple rewrites of our equations. The system we will look at is that of a block fastened to a spring (which in turn is tied to a wall).
-The force acting on the block from the spring in the $x$-drection only is
-!bt
-\[
-m\frac{d^2x(t)}{dt^2}=F(x) = -k(x-b),
-\]
-!et
-where $k$ is a material specific constant and $b$ is the equilibrium position. The block has mass $m$ and $t$ is time. Define the initial time as $t_0$. We will for simplicity set the equilibrium position to zero, that is $b=0$.
 
-* 5a (3pt) Does this force conserve energy? If so, with given initial position and velocity $x_0$ and $v_0$, respectively, find the expression for energy conservation in terms of the potential and kinetic energies.  
 
-This force depdens only on the position and its _curl_ is also zero. Energy is thus conserved.
-Integrating the force gives us a potential energy $1/2kx^2$. With initial conditions for the position $x_0$ and the velocity $v_0$ we have that
+===  Exercise 5 (10pt) and 6 (40pt)  ===
+
+
+=== Answers ===
+
+We start with a simpler case first, the Earth-Sun system  in two dimensions only.  The gravitational force $F_G$ on the earth from the sun is  
+
 !bt
-\[
-\frac{1}{2}kx^2+\frac{1}{2}mv^2=\frac{1}{2}kx_0^2+\frac{1}{2}mv_0^2.
-\]
+  \[
+      \bm{F}_G=-\frac{GM_{\odot}M_E}{r^3}\bm{r},
+  \]
 !et
 
+where $G$ is the gravitational constant, 
 
-* 5b (3pt) Define a constant $\omega_0=\sqrt{k/m}$ and show that you can write the acceleration as $a(t) = -\omega_0^2 x(t)$. What is the dimentionality of $\omega_0$? (it is normally called a natural frequency).  
+!bt
+\[
+M_E=6\times 10^{24}\mathrm{Kg},
+\]
+!et 
 
-The dimensionality of $\omega_0$ is inverse time. The acceleration is
-!bt
-\[
-a=\frac{d^2x(t)}{dt^2}=\frac{F}{m} = -\frac{k}{m}x=-\omega_0^2x.
-\]
-!et
+the mass of Earth, 
 
-
-* 5c (4pt) Introduce now a dimensionless time $\tau = t\omega_0$. Show that you can rewrite the  equation for the acceleration in terms of two first-order differential equations
-
-Starting with
 !bt
 \[
-a=\frac{d^2x}{dt^2}=\frac{F}{m} = -\frac{k}{m}x=-\omega_0^2x,
-\]
-!et
-and introducing a dimensionless time we have
-!bt
-\[
-\omega_0^2\frac{d^2x}{d\tau^2}=-\omega_0^2x,
-\]
-!et
-and dividing by $\omega_0^2$ we have 
-!bt
-\[
-\frac{d^2x(t)}{d\tau^2}=\frac{dv}{d\tau}=-x.
-\]
-!et
-This gives us our first differential equation
-!bt
-\[
-\frac{dv}{d\tau} = -x,
-\]
-!et
-and using the definition of velocity we have
-!bt
-\[
-\frac{dx}{d\tau} = v.
+M_{\odot}=2\times 10^{30}\mathrm{Kg}, 
 \]
 !et
 
-Both equations (velocity and position) have dimensionality length.
-Note that in principle we should have relabeled $v$ as $\overline{v}$ to indicate that it has dimension length and not length divided by time.
-
-
-===  Exercises 6 and 7  ===
-
-The results are detailed in the lecture notes on oscillations. The text here is simply an iteration of what we have discussed during the lectures.
-
-
-We consider only the case where the damping force is proportional to
-the velocity. This is counter to dragging friction, where the force is
-proportional in strength to the normal force and independent of
-velocity, and is also inconsistent with wind resistance, where the
-magnitude of the drag force is proportional the square of the
-velocity. Rolling resistance does seem to be mainly proportional to
-the velocity. However, the main motivation for considering damping
-forces proportional to the velocity is that the math is more
-friendly. This is because the differential equation is linear,
-i.e. each term is of order $x$, $\dot{x}$, $\ddot{x}\cdots$, or even
-terms with no mention of $x$, and there are no terms such as $x^2$ or
-$x\ddot{x}$. The equations of motion for a spring with damping force
-$-b\dot{x}$ are
-
-!bt
-\begin{equation}
-m\ddot{x}+b\dot{x}+kx=0.
-\end{equation}
-!et
-
-Just to make the solution a bit less messy, we rewrite this equation as
-
-!bt
-\begin{equation}
-label{eq:dampeddiffyq}
-\ddot{x}+2\beta\dot{x}+\omega_0^2x=0,~~~~\beta\equiv b/2m,~\omega_0\equiv\sqrt{k/m}.
-\end{equation}
-!et
-
-Both $\beta$ and $\omega$ have dimensions of inverse time. To find solutions (see appendix C in the text) you must make an educated guess at the form of the solution. To do this, first realize that the solution will need an arbitrary normalization $A$ because the equation is linear. Secondly, realize that if the form is
-
-!bt
-\begin{equation}
-x=Ae^{rt}
-\end{equation}
-!et
-
-that each derivative simply brings out an extra power of $r$. This
-means that the $Ae^{rt}$ factors out and one can simply solve for an
-equation for $r$. Plugging this form into Eq. (ref{eq:dampeddiffyq}),
-
-!bt
-\begin{equation}
-r^2+2\beta r+\omega_0^2=0.
-\end{equation}
-!et
-
-Because this is a quadratic equation there will be two solutions,
-
-!bt
-\begin{equation}
-r=-\beta\pm\sqrt{\beta^2-\omega_0^2}.
-\end{equation}
-!et
-
-We refer to the two solutions as $r_1$ and $r_2$ corresponding to the
-$+$ and $-$ roots. As expected, there should be two arbitrary
-constants involved in the solution,
-
-!bt
-\begin{equation}
-x=A_1e^{r_1t}+A_2e^{r_2t},
-\end{equation}
-!et
-
-where the coefficients $A_1$ and $A_2$ are determined by initial
-conditions.
-
-The roots listed above, $\sqrt{\omega_0^2-\beta_0^2}$, will be
-imaginary if the damping is small and $\beta<\omega_0$. In that case,
-$r$ is complex and the factor $e{rt}$ will have some oscillatory
-behavior. If the roots are real, there will only be exponentially
-decaying solutions. There are three cases:
-
-
-
-=== Underdamped: $\beta<\omega_0$ ===
-
-!bt
-\begin{eqnarray}
-x&=&A_1e^{-\beta t}e^{i\omega't}+A_2e^{-\beta t}e^{-i\omega't},~~\omega'\equiv\sqrt{\omega_0^2-\beta^2}\\
-\nonumber
-&=&(A_1+A_2)e^{-\beta t}\cos\omega't+i(A_1-A_2)e^{-\beta t}\sin\omega't.
-\end{eqnarray}
-!et
-
-Here we have made use of the identity
-$e^{i\omega't}=\cos\omega't+i\sin\omega't$. Because the constants are
-arbitrary, and because the real and imaginary parts are both solutions
-individually, we can simply consider the real part of the solution
-alone:
-
-!bt
-\begin{eqnarray}
-label{eq:homogsolution}
-x&=&B_1e^{-\beta t}\cos\omega't+B_2e^{-\beta t}\sin\omega't,\\
-\nonumber 
-\omega'&\equiv&\sqrt{\omega_0^2-\beta^2}.
-\end{eqnarray}
-!et
-
-=== Critical dampling: $\beta=\omega_0$ ===
-
-In this case the two terms involving $r_1$ and $r_2$ are identical
-because $\omega'=0$. Because we need to arbitrary constants, there
-needs to be another solution. This is found by simply guessing, or by
-taking the limit of $\omega'\rightarrow 0$ from the underdamped
-solution. The solution is then
-
-!bt
-\begin{equation}
-label{eq:criticallydamped}
-x=Ae^{-\beta t}+Bte^{-\beta t}.
-\end{equation}
-!et
-
-The critically damped solution is interesting because the solution
-approaches zero quickly, but does not oscillate. For a problem with
-zero initial velocity, the solution never crosses zero. This is a good
-choice for designing shock absorbers or swinging doors.
-
-=== Overdamped: $\beta>\omega_0$ ===
-
-
-!bt
-\begin{eqnarray}
-x&=&A_1\exp{-(\beta+\sqrt{\beta^2-\omega_0^2})t}+A_2\exp{-(\beta-\sqrt{\beta^2-\omega_0^2})t}
-\end{eqnarray}
-!et
-
-This solution will also never pass the origin more than once, and then
-only if the initial velocity is strong and initially toward zero.
-
-
-
-
-Given $b$, $m$ and $\omega_0$, find $x(t)$ for a particle whose
-initial position is $x=0$ and has initial velocity $v_0$ (assuming an
-underdamped solution).
-
-The solution is of the form,
-
-!bt
-\begin{eqnarray*}
-x&=&e^{-\beta t}\left[A_1\cos(\omega' t)+A_2\sin\omega't\right],\\
-\dot{x}&=&-\beta x+\omega'e^{-\beta t}\left[-A_1\sin\omega't+A_2\cos\omega't\right].\\
-\omega'&\equiv&\sqrt{\omega_0^2-\beta^2},~~~\beta\equiv b/2m.
-\end{eqnarray*}
-!et
-
-From the initial conditions, $A_1=0$ because $x(0)=0$ and $\omega'A_2=v_0$. So 
+the mass of the Sun and 
 
 !bt
 \[
-x=\frac{v_0}{\omega'}e^{-\beta t}\sin\omega't.
+r=1.5\times 10^{11}\mathrm{m}, 
+\]
+!et
+
+is the distance between Earth and the Sun. The latter defines what we call an astronomical unit _AU_.
+From Newton's second law we have then for the $x$ direction
+
+!bt
+\[
+\frac{d^2x}{dt^2}=-\frac{F_{x}}{M_E},
+\]
+!et
+
+and
+
+!bt
+\[
+\frac{d^2y}{dt^2}=-\frac{F_{y}}{M_E},
+\]
+!et 
+
+for the $y$ direction.
+
+Here we will use  that  $x=r\cos{(\theta)}$, $y=r\sin{(\theta)}$ and
+
+!bt
+\[
+r = \sqrt{x^2+y^2}.
+\]
+!et 
+
+
+
+We can rewrite these equations
+
+!bt
+\[
+F_{x}=-\frac{GM_{\odot}M_E}{r^2}\cos{(\theta)}=-\frac{GM_{\odot}M_E}{r^3}x,
+\]
+!et
+
+and
+
+!bt
+\[
+F_{y}=-\frac{GM_{\odot}M_E}{r^2}\sin{(\theta)}=-\frac{GM_{\odot}M_E}{r^3}y,
+\]
+!et 
+
+as four first-order coupled differential equations
+
+!bt
+\[
+\frac{dv_x}{dt}=-\frac{GM_{\odot}}{r^3}x,
+\]
+!et
+
+and
+
+!bt
+\[
+\frac{dx}{dt}=v_x,
+\]
+!et
+
+and
+
+!bt
+\[
+\frac{dv_y}{dt}=-\frac{GM_{\odot}}{r^3}y,
+\]
+!et
+
+and
+
+!bt
+\[
+\frac{dy}{dt}=v_y.
 \]
 !et
 
 
 
-Let us remind ourselves about the differential equation we want to solve (the general case with damping due to friction)
-!bt
-\[
-m\frac{d^2x}{dt^2} + b\frac{dx}{dt}+kx(t) =0.
-\]
-!et
-We divide by $m$ and introduce $\omega_0^2=\sqrt{k/m}$ and obtain
-!bt
-\[
-\frac{d^2x}{dt^2} + \frac{b}{m}\frac{dx}{dt}+\omega_0^2x(t) =0.
-\]
-!et
-
-Thereafter we introduce a dimensionless time $\tau = t\omega_0$ (check
-that the dimensionality is correct) and rewrite our equation as
+The four coupled differential equations
 
 !bt
 \[
-\frac{d^2x}{d\tau^2} + \frac{b}{m\omega_0}\frac{dx}{d\tau}+x(\tau) =0,
+\frac{dv_x}{dt}=-\frac{GM_{\odot}}{r^3}x,
 \]
 !et
-which gives us
+
+and
+
 !bt
 \[
-\frac{d^2x}{d\tau^2} + \frac{b}{m\omega_0}\frac{dx}{d\tau}+x(\tau) =0.
+\frac{dx}{dt}=v_x,
 \]
 !et
 
+and
 
-
-We then define $\gamma = b/(2m\omega_0)$ and rewrite our equations as
 !bt
 \[
-\frac{d^2x}{d\tau^2} + 2\gamma\frac{dx}{d\tau}+x(\tau) =0.
+\frac{dv_y}{dt}=-\frac{GM_{\odot}}{r^3}y,
 \]
 !et
-This is the equation we will code below. The first version employs the Euler-Cromer method.
+
+and
+
+!bt
+\[
+\frac{dy}{dt}=v_y,
+\]
+!et
+
+can be turned into dimensionless equations or we can introduce astronomical units with $1$ AU = $1.5\times 10^{11}$. 
+
+Using the equations from circular motion (with $r =1\mathrm{AU}$) 
+
+!bt
+\[
+\frac{M_E v^2}{r} = F = \frac{GM_{\odot}M_E}{r^2},
+\]
+!et 
+
+we have
+
+!bt
+\[
+GM_{\odot}=v^2r,
+\]
+!et  
+
+and using that the velocity of Earth (assuming circular motion) is
+$v = 2\pi r/\mathrm{yr}=2\pi\mathrm{AU}/\mathrm{yr}$, we have
+
+!bt
+\[
+GM_{\odot}= v^2r = 4\pi^2 \frac{(\mathrm{AU})^3}{\mathrm{yr}^2}.
+\]
+!et 
+
+The four coupled differential equations can then be discretized using Euler's method as (with step length $h$)
+!bt
+\[
+v_{x,i+1}=v_{x,i}-h\frac{4\pi^2}{r_i^3}x_i,
+\]
+!et
+
+and
+
+!bt
+\[
+x_{i+1}=x_i+hv_{x,i},
+\]
+!et
+
+and
+
+!bt
+\[
+v_{y,i+1}=v_{y,i}-h\frac{4\pi^2}{r_i^3}y_i,
+\]
+!et
+
+and
+
+!bt
+\[
+y_{i+1}=y_i+hv_{y,i},
+\]
+!et
+
+
+The code here implements Euler's method for the Earth-Sun system using a more compact way of representing the vectors. Alternatively, you could have spelled out all the variables $v_x$, $v_y$, $x$ and $y$ as one-dimensional arrays. 
+
 !bc pycod
 # Common imports
 import numpy as np
@@ -570,48 +539,261 @@ def save_fig(fig_id):
     plt.savefig(image_path(fig_id) + ".png", format='png')
 
 
-from pylab import plt, mpl
-plt.style.use('seaborn')
-mpl.rcParams['font.family'] = 'serif'
-
-DeltaT = 0.001
+DeltaT = 0.01
 #set up arrays 
-tfinal = 20 # in years
+tfinal = 10 # in years
 n = ceil(tfinal/DeltaT)
-# set up arrays for t, v, and x
+# set up arrays for t, a, v, and x
 t = np.zeros(n)
-v = np.zeros(n)
-x = np.zeros(n)
-# Initial conditions as simple one-dimensional arrays of time
-x0 =  1.0 
-v0 = 0.0
-x[0] = x0
+v = np.zeros((n,2))
+r = np.zeros((n,2))
+# Initial conditions as compact 2-dimensional arrays
+r0 = np.array([1.0,0.0])
+v0 = np.array([0.0,2*pi])
+r[0] = r0
 v[0] = v0
-gamma = 0.0
-# Start integrating using Euler-Cromer's method
+Fourpi2 = 4*pi*pi
+# Start integrating using Euler's method
 for i in range(n-1):
     # Set up the acceleration
     # Here you could have defined your own function for this
-    a =  -2*gamma*v[i]-x[i]
-    # update velocity, time and position
+    rabs = sqrt(sum(r[i]*r[i]))
+    a =  -Fourpi2*r[i]/(rabs**3)
+    # update velocity, time and position using Euler's forward method
     v[i+1] = v[i] + DeltaT*a
-    x[i+1] = x[i] + DeltaT*v[i+1]
+    r[i+1] = r[i] + DeltaT*v[i]
     t[i+1] = t[i] + DeltaT
 # Plot position as function of time    
 fig, ax = plt.subplots()
 #ax.set_xlim(0, tfinal)
-ax.set_ylabel('x[m]')
-ax.set_xlabel('t[s]')
-ax.plot(t, x)
+ax.set_xlabel('x[AU]')
+ax.set_ylabel('y[AU]')
+ax.plot(r[:,0], r[:,1])
 fig.tight_layout()
-save_fig("BlockEulerCromer")
+save_fig("EarthSunEuler")
 plt.show()
 !ec
 
-When setting up the value of $\gamma$ we see that for $\gamma=0$ we get the simple oscillatory motion with no damping.
-Choosing $\gamma < 1$ leads to the classical underdamped case with oscillatory motion, but where the motion comes to an end.
+We notice here that Euler's method doesn't give a stable orbit with for example $\Delta t =0.01$. It
+means that we cannot trust Euler's method. Euler's method does not conserve energy. It is an
+example of an integrator which is not
+"symplectic":"https://en.wikipedia.org/wiki/Symplectic_integrator".
 
-Choosing $\gamma =1$ leads to what normally is called critical damping and $\gamma> 1$ leads to critical overdamping.
-Try it out and try also to change the initial position and velocity. Setting $\gamma=1$
-yields a situation, as discussed above, where the solution approaches quickly zero and does not oscillate. With zero initial velocity it will never cross zero. 
+Here we present thus two methods, which with simple changes allow us
+to avoid these pitfalls. The simplest possible extension is the
+so-called Euler-Cromer method.  The changes we need to make to our
+code are indeed marginal here.  We need simply to replace
+
+!bc pycod
+    r[i+1] = r[i] + DeltaT*v[i]
+!ec
+in the above code with the velocity at the new time $t_{i+1}$
+!bc pycod
+    r[i+1] = r[i] + DeltaT*v[i+1]
+!ec
+
+By this simple caveat we get stable orbits.  Below we derive the
+Euler-Cromer method as well as one of the most utlized algorithms for
+solving the above type of problems, the so-called Velocity-Verlet
+method.
+
+
+Let us repeat Euler's method.
+We have a differential equation
+!bt
+\begin{equation}
+  y'(t_i)=f(t_i,y_i)   
+\end{equation}
+!et
+and if we truncate at the first derivative, we have from the Taylor expansion
+!bt
+\begin{equation}
+   y_{i+1}=y(t_i) + (\Delta t) f(t_i,y_i) + O(\Delta t^2), label{eq:euler}
+\end{equation}
+!et
+which when complemented with $t_{i+1}=t_i+\Delta t$ forms
+the algorithm for the well-known Euler method. 
+Note that at every step we make an approximation error
+of the order of $O(\Delta t^2)$, however the total error is the sum over all
+steps $N=(b-a)/(\Delta t)$ for $t\in [a,b]$, yielding thus a global error which goes like
+$NO(\Delta t^2)\approx O(\Delta t)$. 
+
+To make Euler's method more precise we can obviously
+decrease $\Delta t$ (increase $N$), but this can lead to loss of numerical precision.
+Euler's method is not recommended for precision calculation,
+although it is handy to use in order to get a first
+view on how a solution may look like.
+
+Euler's method is asymmetric in time, since it uses information about the derivative at the beginning
+of the time interval. This means that we evaluate the position at $y_1$ using the velocity
+at $v_0$. A simple variation is to determine $x_{n+1}$ using the velocity at
+$v_{n+1}$, that is (in a slightly more generalized form)
+!bt
+\begin{equation} 
+   y_{n+1}=y_{n}+ v_{n+1}+O(\Delta t^2)
+\end{equation}
+!et
+and 
+!bt
+\begin{equation}
+   v_{n+1}=v_{n}+(\Delta t) a_{n}+O(\Delta t^2).
+\end{equation}
+!et
+The acceleration $a_n$ is a function of $a_n(y_n, v_n, t_n)$ and needs to be evaluated
+as well. This is the Euler-Cromer method. It is easy to change the above code and see that with the same 
+time step we get stable results.
+
+
+Let us stay with $x$ (position) and $v$ (velocity) as the quantities we are interested in.
+
+We have the Taylor expansion for the position given by
+!bt
+\[
+x_{i+1} = x_i+(\Delta t)v_i+\frac{(\Delta t)^2}{2}a_i+O((\Delta t)^3).
+\]
+!et
+The corresponding expansion for the velocity is 
+!bt
+\[
+v_{i+1} = v_i+(\Delta t)a_i+\frac{(\Delta t)^2}{2}v^{(2)}_i+O((\Delta t)^3).
+\]
+!et
+Via Newton's second law we have normally an analytical expression for the derivative of the velocity, namely
+!bt
+\[
+a_i= \frac{d^2 x}{dt^2}\vert_{i}=\frac{d v}{dt}\vert_{i}= \frac{F(x_i,v_i,t_i)}{m}.
+\]
+!et
+
+
+If we add to this the corresponding expansion for the derivative of the velocity 
+!bt
+\[
+v^{(1)}_{i+1} = a_{i+1}= a_i+(\Delta t)v^{(2)}_i+O((\Delta t)^2)=a_i+(\Delta t)v^{(2)}_i+O((\Delta t)^2), 
+\]
+!et
+and retain only terms up to the second derivative of the velocity since our error goes as $O(h^3)$, we have
+!bt
+\[
+(\Delta t)v^{(2)}_i\approx a_{i+1}-a_i.
+\]
+!et
+We can then rewrite the Taylor expansion for the velocity as  
+!bt
+\[
+v_{i+1} = v_i+\frac{(\Delta t)}{2}\left( a_{i+1}+a_{i}\right)+O((\Delta t)^3).
+\]
+!et
+
+Our final equations for the position and the velocity become then 
+!bt
+\[
+x_{i+1} = x_i+(\Delta t)v_i+\frac{(\Delta t)^2}{2}a_{i}+O((\Delta t)^3),
+\]
+!et
+and
+!bt
+\[
+v_{i+1} = v_i+\frac{(\Delta t)}{2}\left(a_{i+1}+a_{i}\right)+O((\Delta t)^3). 
+\]
+!et
+Note well that the term $a_{i+1}$ depends on the position at $x_{i+1}$. This means that you need to calculate 
+the position at the updated time $t_{i+1}$ before the computing the next velocity.  Note also that the derivative of the velocity at the time
+$t_i$ used in the updating of the position can be reused in the calculation of the velocity update as well. 
+
+We can now easily add the Verlet method to our original code as
+!bc pycod
+DeltaT = 0.01
+#set up arrays 
+tfinal = 10
+n = ceil(tfinal/DeltaT)
+# set up arrays for t, a, v, and x
+t = np.zeros(n)
+v = np.zeros((n,2))
+r = np.zeros((n,2))
+# Initial conditions as compact 2-dimensional arrays
+r0 = np.array([1.0,0.0])
+v0 = np.array([0.0,2*pi])
+r[0] = r0
+v[0] = v0
+Fourpi2 = 4*pi*pi
+# Start integrating using the Velocity-Verlet  method
+for i in range(n-1):
+    # Set up forces, air resistance FD, note now that we need the norm of the vecto
+    # Here you could have defined your own function for this
+    rabs = sqrt(sum(r[i]*r[i]))
+    a =  -Fourpi2*r[i]/(rabs**3)
+    # update velocity, time and position using the Velocity-Verlet method
+    r[i+1] = r[i] + DeltaT*v[i]+0.5*(DeltaT**2)*a
+    rabs = sqrt(sum(r[i+1]*r[i+1]))
+    anew = -4*(pi**2)*r[i+1]/(rabs**3)
+    v[i+1] = v[i] + 0.5*DeltaT*(a+anew)
+    t[i+1] = t[i] + DeltaT
+# Plot position as function of time    
+fig, ax = plt.subplots()
+ax.set_xlabel('x[AU]')
+ax.set_ylabel('y[AU]')
+ax.plot(r[:,0], r[:,1])
+fig.tight_layout()
+save_fig("EarthSunVV")
+plt.show()
+!ec
+
+You can easily generalize the calculation of the forces by defining a function
+which takes in as input the various variables. We leave this as a challenge to you.
+
+Running the above code for various time steps we see that the Velocity-Verlet is fully stable for various time steps.
+
+We can also play around with different initial conditions in order to find the escape velocity from an orbit around the sun with distance one astronomical unit, 1 AU. The theoretical value for the escape velocity, is given by
+!bt
+\[
+v = \sqrt{8\pi^2}{r},
+\]
+!et
+and with $r=1$ AU, this means that the escape velocity is $2\pi\sqrt{2}$ AU/yr. To obtain this we required that the kinetic energy of Earth equals the potential energy given by the gravitational force.
+
+Setting
+!bt
+\[
+\frac{1}{2}M_{\mathrm{Earth}}v^2=\frac{GM_{\odot}}{r},
+\]
+!et
+and with $GM_{\odot}=4\pi^2$ we obtain the above relation for the velocity. Setting an initial velocity say equal to $9$ in the above code, yields a planet (Earth) which escapes a stable orbit around the sun, as seen by running the code here.
+!bc pycod
+DeltaT = 0.01
+#set up arrays 
+tfinal = 100
+n = ceil(tfinal/DeltaT)
+# set up arrays for t, a, v, and x
+t = np.zeros(n)
+v = np.zeros((n,2))
+r = np.zeros((n,2))
+# Initial conditions as compact 2-dimensional arrays
+r0 = np.array([1.0,0.0])
+# setting initial velocity larger than escape velocity
+v0 = np.array([0.0,9.0])
+r[0] = r0
+v[0] = v0
+Fourpi2 = 4*pi*pi
+# Start integrating using the Velocity-Verlet  method
+for i in range(n-1):
+    # Set up forces, air resistance FD, note now that we need the norm of the vecto
+    # Here you could have defined your own function for this
+    rabs = sqrt(sum(r[i]*r[i]))
+    a =  -Fourpi2*r[i]/(rabs**3)
+    # update velocity, time and position using the Velocity-Verlet method
+    r[i+1] = r[i] + DeltaT*v[i]+0.5*(DeltaT**2)*a
+    rabs = sqrt(sum(r[i+1]*r[i+1]))
+    anew = -4*(pi**2)*r[i+1]/(rabs**3)
+    v[i+1] = v[i] + 0.5*DeltaT*(a+anew)
+    t[i+1] = t[i] + DeltaT
+# Plot position as function of time    
+fig, ax = plt.subplots()
+ax.set_xlabel('x[AU]')
+ax.set_ylabel('y[AU]')
+ax.plot(r[:,0], r[:,1])
+fig.tight_layout()
+save_fig("EscapeEarthSunVV")
+plt.show()
+!ec
 
