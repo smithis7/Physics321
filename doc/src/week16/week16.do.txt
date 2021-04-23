@@ -11,6 +11,8 @@ DATE: today
 
 * Variational Calculus, Lagrangians and examples
 
+"Video of Lecture April 19":"https://mediaspace.msu.edu/media/t/1_o0e6xygq"
+
 _Additional HW 10 available_ at URL:"https://mhjensen.github.io/Physics321/doc/Homeworks/hw10/html/hw10.html"
 
 _Reading suggestion_: Taylor chapter 7
@@ -21,7 +23,13 @@ _Reading suggestion_: Taylor chapter 7
 * Variational Calculus, Lagrangians and examples
 * Summary of course
 
+"Video of Lecture at":"https://mediaspace.msu.edu/media/t/1_q2jqoj6z"
+
 _Reading suggestion_: Taylor chapter 7
+
+
+
+
 
 
 === Friday ===
@@ -43,15 +51,15 @@ problems where the quantity to be minimized or maximized is an integral.
 
 
 The usual minimization problem one faces involves taking a function
-${\cal L}(x)$, then finding the single value $x$ for which ${\cal L}$
+$\cal{L}(x)$, then finding the single value $x$ for which $\cal{L}$
 is either a maximum or minimum. In multivariate calculus one also
 learns to solve problems where you minimize for multiple variables,
-${\cal L}(x_1,x_2,\cdots x_n)$, and finding the points $(x_1\cdots
+$\cal{L}(x_1,x_2,\cdots x_n)$, and finding the points $(x_1\cdots
 y_n)$ in an $n$-dimensional space that maximize or minimize the
 function. Here, we consider what seems to be a much more ambitious
-problem. Imagine you have a function ${\cal L}(x(t),\dot{x}(t),t)$,
+problem. Imagine you have a function $\cal{L}(x(t),\dot{x}(t),t)$,
 and you wish to find the extrema for an infinite number of values of
-$x$, i.e. $x$ at each point $t$. The function ${\cal L}$ will not only
+$x$, i.e. $x$ at each point $t$. The function $\cal{L}$ will not only
 depend on $x$ at each point $t$, but also on the slope at each point,
 plus an additional dependence on $t$. Note we are NOT finding an
 optimum value of $t$, we are finding the set of optimum values of $x$
@@ -65,7 +73,7 @@ One treats the function $x(t)$ as being unknown while minimizing the action
 
 !bt
 \[
-S=\int_{t_1}^{t_2}dt~{\cal L}(x(t),\dot{x}(t),t).
+S=\int_{t_1}^{t_2}dt~\cal{L}(x(t),\dot{x}(t),t).
 \]
 !et
 
@@ -75,7 +83,7 @@ assume that $x(t_1)$ and $x(t_2)$ are fixed, and that that we will
 only consider variations of $x$ between the boundaries. The dependence
 on the derivative, $\dot{x}=dx/dt$, is crucial because otherwise the
 solution would involve simply finding the one value of $x$ that
-minimized ${\cal L}$, and $x(t)$ would equal a constant if there were no
+minimized $\cal{L}$, and $x(t)$ would equal a constant if there were no
 explicit $t$ dependence. Furthermore, $x$ wouldn't need to be
 continuous at the boundary.
 
@@ -87,12 +95,12 @@ continuous at the boundary.
 In the general case we have an integral of the type
 !bt
 \[ 
-S[q]= \int_{t_1}^{t_2} {\cal L}(q(t),\dot{q}(t),t)dt,
+S[q]= \int_{t_1}^{t_2} \cal{L}(q(t),\dot{q}(t),t)dt,
 \]
 !et
 
 where $S$ is the quantity which is sought minimized or maximized.  The
-problem is that although ${\cal L}$  is a function of the general variables
+problem is that although $\cal{L}$  is a function of the general variables
 $q(t),\dot{q}(t),t$ (note our change of variables), the exact dependence of $q$ on $t$ is not known.
 This means again that even though the integral has fixed limits $t_1$
 and $t_2$, the path of integration is not known. In our case the unknown
@@ -152,7 +160,7 @@ We have
 
 !bt
 \[
-S[q(\alpha)]= \int_{t_1}^{t_2} {\cal L}(q(t,\alpha),\dot{q}(t,\alpha),t)dt.
+S[q(\alpha)]= \int_{t_1}^{t_2} \cal{L}(q(t,\alpha),\dot{q}(t,\alpha),t)dt.
 \]
 !et
 
@@ -161,7 +169,7 @@ The condition for an extreme of
 
 !bt
 \[
-S[q(\alpha)]= \int_{t_1}^{t_2} {\cal L}(q(t,\alpha),\dot{q}(t,\alpha),t)dt,
+S[q(\alpha)]= \int_{t_1}^{t_2} \cal{L}(q(t,\alpha),\dot{q}(t,\alpha),t)dt,
 \]
 !et
 
@@ -182,7 +190,7 @@ The $\alpha$ dependence is contained in $q(t,\alpha)$ and $\dot{q}(t,\alpha)$ me
 
 !bt
 \[
-\left[\frac{\partial  E[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial {\cal l}}{\partial q}\frac{\partial q}{\partial \alpha}+\frac{\partial {\cal L}}{\partial \dot{q}}\frac{\partial \dot{q}}{\partial \alpha}\right)dt.
+\left[\frac{\partial  E[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial \cal{l}}{\partial q}\frac{\partial q}{\partial \alpha}+\frac{\partial \cal{L}}{\partial \dot{q}}\frac{\partial \dot{q}}{\partial \alpha}\right)dt.
 \]
 !et
 We have defined
@@ -225,7 +233,7 @@ in the integral gives
 
 !bt
 \[
-\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial {\cal L}}{\partial q}\eta(t)+\frac{\partial {\cal L}}{\partial \dot{q}}\frac{d(\eta(t))}{dt}\right)dt.
+\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial \cal{L}}{\partial q}\eta(t)+\frac{\partial \cal{L}}{\partial \dot{q}}\frac{d(\eta(t))}{dt}\right)dt.
 \]
 !et
 
@@ -233,8 +241,8 @@ Integrating the second term by parts
 
 !bt
 \[
-\int_{t_1}^{t_2} \frac{\partial {\cal L}}{\partial \dot{q}}\frac{d(\eta(t))}{dt}dt =\eta(t)\frac{\partial {\cal L}}{\partial \dot{q}}|_{t_1}^{t_2}-
-\int_a^b \eta(t)\frac{d}{dx}\frac{\partial {\cal L}}{\partial \dot{q}}dt,
+\int_{t_1}^{t_2} \frac{\partial \cal{L}}{\partial \dot{q}}\frac{d(\eta(t))}{dt}dt =\eta(t)\frac{\partial \cal{L}}{\partial \dot{q}}|_{t_1}^{t_2}-
+\int_a^b \eta(t)\frac{d}{dx}\frac{\partial \cal{L}}{\partial \dot{q}}dt,
 \]
 !et
 
@@ -244,7 +252,7 @@ and since the first term dissappears due to $\eta(a)=\eta(b)=0$, we obtain
 
 !bt
 \[
-\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial {\cal L}}{\partial q}-\frac{d}{dx}\frac{\partial {\cal L}}{\partial \dot{q}}
+\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]=\int_{t_1}^{t_2} \left( \frac{\partial \cal{L}}{\partial q}-\frac{d}{dx}\frac{\partial \cal{L}}{\partial \dot{q}}
 \right)\eta(t)dt=0.
 \]
 !et
@@ -257,8 +265,8 @@ The latter can be written as
 
 !bt
 \[
-\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]_{\alpha=0}=\int_{t_1}^{t_2} \left( \frac{\partial {\cal L}}{\partial q}-\frac{d}{\
-dx}\frac{\partial {\cal L}}{\partial \dot{q}}\right)\delta q(t)dt=\delta S = 0.
+\left[\frac{\partial  S[q(\alpha)]}{\partial \alpha}\right]_{\alpha=0}=\int_{t_1}^{t_2} \left( \frac{\partial \cal{L}}{\partial q}-\frac{d}{\
+dx}\frac{\partial \cal{L}}{\partial \dot{q}}\right)\delta q(t)dt=\delta S = 0.
 \]
 !et
 
@@ -267,7 +275,7 @@ The condition for a stationary value is thus a partial differential equation
 
 !bt
 \[
-\frac{\partial {\cal L}}{\partial q}-\frac{d}{dx}\frac{\partial {\cal L}}{\partial \dot{q}}=0,
+\frac{\partial \cal{L}}{\partial q}-\frac{d}{dx}\frac{\partial \cal{L}}{\partial \dot{q}}=0,
 \]
 !et
 
@@ -766,6 +774,9 @@ The Euler-Lagrange equations then become
 \end{eqnarray*}
 !et
 
+!split
+===== Example, guessing =====
+
 Here, we will guess at the form of the solution,
 
 !bt
@@ -794,6 +805,10 @@ y=\tilde{\lambda}+a\cosh[(x-x_0)/a].
 \]
 !et
 
+!split
+===== Example, getting there =====
+
+
 One must find $\tilde{\lambda}$, $x_0$ and $a$ to satisfy three
 conditions, $y(x=0)=0$, $y(x=x_f)=y_f$ and that the length is $L$. For
 a hanging chain $a$ is positive. A solution with negative $a$ would
@@ -804,7 +819,7 @@ $g$. Thus, the shape of the chain would be the same if you took it to
 the moon. These solutions are known as "catenaries":"http://en.wikipedia.org/wiki/Catenary}{http://en.wikipedia.org/wiki/Catenary".
 
 
-
+!split
 ===== Lagrangians =====
 
 Lagrangians represent a powerful method for solving problems that
@@ -815,6 +830,10 @@ generalized coordinate might be the angle describing the position of a
 pendulum. This one angle takes the place of using $x$ and $y$ to
 describe the position of the pendulum, then applying a clumsy
 constraint.
+
+
+!split
+===== Equations of Motions  =====
 
 The Lagrangian equations of motion can be derived from a principle of
 least action, where the action $S$ is defined as
@@ -845,6 +864,10 @@ equations of motion,
 \end{equation}
 !et
 
+!split
+===== Two simple Examples =====
+
+
 We begin with two simple examples, neither of which gains from the Lagrangian approach.
 
 
@@ -873,8 +896,8 @@ m\ell^2\ddot{\theta}&=&-mg\ell\sin\theta,\\
 !et
 
 
-
-=== Proving Lagrange's Equations of Motion from Newton's Laws ===
+!split
+===== Proving Lagrange's Equations of Motion from Newton's Laws =====
 
 Lagrange's equations of motion can only be applied for the following conditions:
 
@@ -885,6 +908,9 @@ Lagrange's equations of motion can only be applied for the following conditions:
 * Any constraints used to reduce the number of degrees of freedom are functions of $\bm{q}$, but not of $\dot{\bm{q}}$.
 * The motion is not dissipative (no damping or friction).
 
+
+!split
+===== Proving Lagrange's Equations of Motion from Newton's Laws =====
 
 Going forward with the proof, consider $x_i(q_1,q_2\cdots,t)$ and look
 at the l.h.s. of Lagrange's equations of motion.
@@ -913,6 +939,9 @@ $x$. Continuing with taking the derivative of $U$,
 -\frac{\partial U}{\partial\dot{q}_j}&=&-\sum_i\frac{\partial U}{\partial x_i}\frac{\partial x_i}{\partial\dot{q}_j}=0.
 \end{eqnarray}
 !et
+
+!split
+===== Proving Lagrange's Equations of Motion from Newton's Laws, continued =====
 
 In the first line above we used the fact that $U$ does not depend on $\dot{x}$ then we used the second condition that $x$ does not depend on $\dot{q}$. Adding the two pieces together, then taking the derivative w.r.t. time,
 
@@ -948,7 +977,8 @@ see that the bottom expressions above are identical,
 !et
 
 
-=== Lagrangian Examples ===
+!split
+===== Lagrangian Examples =====
 
 Two examples are presented here. In the first, there are two
 generalized coordinates, but the two equations of motion can be
@@ -967,6 +997,9 @@ r=\sqrt{x^2+y^2}=z\tan \alpha.
 
 Find the equations of motion for a particle of mass $m$ moving along the surface under the influence of a constant gravitational force, $-mg\hat{z}$. For generalized coordinates use the azimuthal angle $\phi$ and $r$.
 
+
+!split
+===== Cone Example =====
 
 The kinetic energy is 
 
@@ -997,6 +1030,9 @@ so Lagrange's equations give
 !et
 
 
+!split
+===== More on the Cone Example =====
+
 The first equation is a statement of the conservation of angular
 momentum with $L=mr^2\dot{\theta}$, so the second equation can also be
 expressed as
@@ -1007,6 +1043,10 @@ expressed as
 \]
 !et
 
+
+!split
+===== Sliding Bead =====
+
 A bead slides along a wire bent in the shape of a parabola, 
 
 !bt
@@ -1014,6 +1054,8 @@ A bead slides along a wire bent in the shape of a parabola,
 z=\frac{1}{2}kr^2,~~r^2=x^2+y^2.
 \]
 !et
+
+
 
 Also, the parabolic wire is rotating about the $z$ axis with angular
 velocity $\omega$. Derive the equations of motion. Are there any
@@ -1038,6 +1080,9 @@ U&=&mgkr^2/2.
 \end{eqnarray*}
 !et
 
+!split
+===== And then the Equations of Motion =====
+
 
 The equations of motion are then
 
@@ -1055,7 +1100,7 @@ needs to have $gk>\omega^2$. If $\omega^2>gk$ the bead will move
 outward indefinitely.
 
 
-
+!split
 ===== Small Vibrations and Normal Modes =====
 
 Two examples are provided for solving for normal modes. These are
@@ -1083,6 +1128,9 @@ involves finding the direction, or the linear combination of $x_i$
 that form the coordinates $q_i$ in which the motion is that of a
 single oscillator in each coordinate.
 
+!split
+===== Coupled Springs =====
+
 For a first example, we consider a system of springs, where we write
 the Lagrangian, then find the normal modes. For the second example, a
 double pendulum is considered. In this case, one must first make a
@@ -1098,6 +1146,8 @@ velocity. One can also describe these as normal modes, but acknowledge
 that their characteristic frequency is zero, as there are no restoring
 forces.
 
+!split
+===== Coupled Springs, Part 1 =====
 
 Consider two springs, whose relaxed lengths are $\ell$, connected to three masses as depicted in the figure here. Describe the two normal modes of the motion. We can write the Lagrangian as
 
@@ -1119,6 +1169,10 @@ m\ddot{x}_3&=&-k(x_3-x_2+\ell).
 \end{eqnarray*}
 !et
 
+
+!split
+===== Coupled Springs, Part 2 =====
+
 This is a bit complicated because the center-of-mass motion does not easily separate from the three equations. Instead, choose the following coordinates,
 
 !bt
@@ -1128,6 +1182,9 @@ q_1&=&x_1-x_2+\ell,\\
 q_3&=&x_3-x_2-\ell.
 \end{eqnarray*}
 !et
+
+!split
+===== Coupled Springs, Part 3 =====
 
 
 In these coordinates the potential energy only involves two coordinates,
@@ -1148,6 +1205,10 @@ x_2&=&(4X-q_1-q_3)/4,\\
 x_3&=&(3q_3-q_1+4\ell+4X)/4.
 \end{eqnarray*}
 !et
+
+
+!split
+===== Coupled Springs, Part 4 =====
 
 The kinetic energy and Lagrangian are them
 
@@ -1173,6 +1234,11 @@ The three equations of motion are then,
 \end{eqnarray*}
 !et
 
+
+!split
+===== Coupled Springs, Part 5 =====
+
+
 The last equation simply states that the center-of-mass velocity is
 fixed. One could obtain the same result by summing the equations of
 motion for $x_1$, $2x_2$ and $x_3$ above. The second two equations are
@@ -1197,6 +1263,11 @@ the equations of motion,
 \end{eqnarray*}
 !et
 
+
+!split
+===== Coupled Springs, Part 6 =====
+
+
 This is two equations and two unknowns, $\omega^2$ and
 $A/B$. Substituting for $A/B$ gives a quadratic equation,
 
@@ -1216,6 +1287,9 @@ The two solutions are
 \end{eqnarray*}
 !et
 
+!split
+===== Coupled Springs, Part 7 =====
+
 The first solution corresponds to the two outer masses moving in
 opposite directions, in sync, with the middle mass fixed. The second
 solution has both outer masses moving in the same direction, but with
@@ -1230,6 +1304,8 @@ the motion. Further, the frequencies of these modes represent the
 natural resonant frequencies of the system. This is important in the
 construction of many structures, such as bridges or vehicles.
 
+!split
+===== Double Pendulum, Part 1 =====
 
 Consider a double pendulum confined to the $x-y$ plane, where $y$ is
 vertical. A mass $m$ is connected to the ceiling with a massless
@@ -1241,6 +1317,8 @@ motion, both for arbitrary angles and in the small-angle
 approximation. Finally, express the equations of motion in the limit
 of small oscillations.
 
+!split
+===== Double Pendulum, Part 2 =====
 
 The kinetic and potential energies are:
 
@@ -1255,6 +1333,10 @@ U&=&mg\ell(1-\cos\theta_1)+mg\left[\ell(1-\cos\theta_1)+\ell(1-\cos\theta_2)\rig
 &=&mg\ell(3-2\cos\theta_1-\cos\theta_2)
 \end{eqnarray*}
 !et
+
+
+!split
+===== Double Pendulum, Part 3 =====
 
 Lagrange's equations for $\theta_1$ lead to
 
@@ -1280,6 +1362,10 @@ m\ell^2\dot{\theta}_1\dot{\theta}_2\sin(\theta_1-\theta_2)-mg\ell\sin\theta_2,\\
 \end{eqnarray*}
 !et
 
+!split
+===== Double Pendulum, Part 4 =====
+
+
 For small oscillations, one can only consider terms linear in $\theta_1$ and $\theta_2$ or their derivatives,
 
 !bt
@@ -1293,6 +1379,10 @@ For small oscillations, one can only consider terms linear in $\theta_1$ and $\t
 To find the solutions, assume they are of the form
 $\theta_1=Ae^{i\omega t}, \theta_2=Be^{i\omega t}$. Solve for $\omega$
 and $A/B$, noting that $B$ is arbitrary.
+
+!split
+===== Double Pendulum, Part 5 =====
+
 
 Plug in the desired form and find
 
@@ -1312,6 +1402,11 @@ it is the same as $A/B$ for arbitrary $B$. This gives the equations
 \omega^2A+\omega^2&=&\omega_0^2.
 \end{eqnarray*}
 !et
+
+
+!split
+===== Double Pendulum, Part 6 =====
+
 
 This is two equations and two unknowns. Solving them leads to a
 quadratic equation with solutions
@@ -1335,6 +1430,10 @@ constants. For the angles $\theta_1$ and $\theta_2$ are:
 \end{eqnarray*}
 !et
 
+!split
+===== Double Pendulum, Part 7 =====
+
+
 One can also express the solution in vector notation, with the vectors
 having arbitrary amplitudes $A_+$ and $A_-$,
 
@@ -1351,6 +1450,8 @@ Here, the upper/lower components of the vector describe
 $\theta_1/\theta_2$ respectively.
 
 
+!split
+===== Double Pendulum, Part 8 =====
 
 
 These problems can be treated as linear algebra exercises. Linear
@@ -1368,17 +1469,26 @@ a form that looks like the spring equation. However, $q$ is an
 $n-$dimensional vector and $M$ and $k$ are $n\times n$ matrices. In
 the double pendulum example, the dimensionality is 2 and the $q$
 refers to the $\theta_1$ and $\theta_2$, and the matrices for $M$ and
-$K$ can be read off (add ref).
+$K$ can be read off as
 
 !bt
-\begin{eqnarray*}
-M&=&\left(\begin{array}{cc}
-2&1\\
-1&1\end{array}\right)~,\hspace*{40pt} K=\left(\begin{array}{cc}
-2\omega_0^2&0\\
-0&\omega_0^2\end{array}\right).
-\end{eqnarray*}
+\[
+M=\begin{bmatrix} 2&1\\ 1&1\end{bmatrix},
+\]
 !et
+
+and
+
+!bt
+\[
+K=\begin{bmatrix} 2\omega_0^2&0\\ 0&\omega_0^2\end{bmatrix}.
+\]
+!et
+
+
+!split
+===== Double Pendulum, Part 9 =====
+
 
 Multiplying both sides of the equation by the inverse matrix $M^{-1}$,
 
@@ -1400,6 +1510,10 @@ M^{-1}K&=&\left(\begin{array}{cc}
 -2&2\end{array}\right)\omega_0^2.
 \end{eqnarray*}
 !et
+
+!split
+===== Double Pendulum, Part 10 =====
+
 
 One can find a transformation, basically a rotation, that transforms
 to a frame where $M^{-1}K$ is diagonal. In this coordinate system the
@@ -1437,6 +1551,11 @@ motion as an eigenvalue problem,
 \end{eqnarray}
 !et
 
+
+!split
+===== Double Pendulum, Part 11 =====
+
+
 In the coordinate system where $M^{-1}K$ is diagonal, and the forms
 for $u_i$ are simple this requires that in that system, the diagonal
 elements of $M^{-1}K$ are the eigenvalues, $\omega_i^2$. For each
@@ -1464,6 +1583,11 @@ A_{11}A_{22}-\lambda A_{11}-\lambda A_{22}+\lambda^2-A_{21}A_{12}&=&0.
 \end{eqnarray}
 !et
 
+
+!split
+===== Double Pendulum, Part 12 =====
+
+
 One can solve a quadratic equation for $\lambda$, which gives two
 eigenvalues corresponding to $\omega_+^2$ and $\omega_-^2$ found
 above. Choosing one of the eigenvalues, one can insert one of the
@@ -1480,7 +1604,7 @@ programming languages all have packages which readily diagonalize
 matrices and find eigenvectors and eigenvalues.
 
 
-
+!split
 ===== Conservation Laws =====
 
 Energy is conserved only when the Lagrangian has no explicit
@@ -1510,6 +1634,9 @@ equations,
 \end{eqnarray}
 !et
 
+!split
+===== Convervation Laws, part 2 =====
+
 These steps assumed that $L$ had no explicit time dependence, i.e. $L$
 is a function of $q$ and $\dot{q}$, but not of $t$.
 
@@ -1529,7 +1656,7 @@ T=\sum_{ij}A_{ij}(q)\dot{q}_i\dot{q}_j,
 \end{equation}
 !et
 
-the Hamiltonian becomes
+the expression for the energy  becomes
 
 !bt
 \begin{eqnarray}
@@ -1539,6 +1666,10 @@ H&=&\sum_{ij}2A_{ij}(q)\dot{q}_i\dot{q}_j-\sum_{ij}A_{ij}(q)\dot{q}_i\dot{q}_j+V
 \end{eqnarray}
 !et
 
+!split
+===== Convervation Laws, part 3 =====
+
+
 The proof that $H$ equals the energy hinged on the fact that the
 kinetic energy was quadratic in $\dot{q}$. This can be attributed to
 time-reversal symmetry. Because the Cartesian coordinates $x_i$ do not
@@ -1546,6 +1677,11 @@ depend on $\dot{q}_i$ or on time, $\dot{x}_i=(\partial x_i/\partial
 q_j)\dot{q}_j$. Thus, the kinetic energy, $T=m\dot{x}_i^2/2$, should
 be proportional to two powers of $\dot{q}$, which validates the
 assumption above.
+
+
+!split
+===== Convervation Laws, part 4 =====
+
 
 Here, energy conservation is predicated on the Lagrangian not having
 an explicit time dependence. Without an explicit time dependence the
@@ -1578,6 +1714,10 @@ not on the angle, Lagrange's equations become
 \end{eqnarray}
 !et
 
+!split
+===== Convervation Laws, part 4 =====
+
+
 The second equation implies that $mr^2\dot{\theta}$ is a
 constant. Indeed, it is the angular momentum which is conserved for a
 radial force. Here, the conservation of angular momentum is associated
@@ -1602,6 +1742,10 @@ see that the quantity $\partial L/\partial\dot{q}_i$ is conserved,
 \frac{d}{dt}\frac{\partial L}{\partial\dot{q}_i}=0.
 \end{equation}
 !et
+
+!split
+===== Convervation Laws, Another Example =====
+
 
 Another easy example is in Cartesian coordinates where the potential
 depends only on $x$ and $y$ but not on $z$. In that case, there is a
@@ -1664,6 +1808,7 @@ FIGURE: [figures/exam2.jpg, width=500 frac=0.7]
 * Deriving equations of motion from Lagrangian formalism only
 * Lagrangian formalism with constraints
 
+
 !split
 ===== And how to solve these problems =====
 
@@ -1703,7 +1848,72 @@ for i in range(n-1):
 The overarching idea is that as soon as we have analyzed the forces at play, we can reuse our programs (algorithms) with new forces, without having to recur to the few analytical cases we can solve.
 
 
+
+!split
+===== Learning outcomes =====
+
+After the course you should:
+
+o be able to analyze forces that act on objects, apply Newton’s laws to determine the equations of motion, and solve these analytically and numerically,
+o Know about  inertial frames and their relation to accelerating and rotating frames (non-inertial frames)
+o Know about forces, work, energy, angular momentum, linear momentum and conservation laws
+o Know about  various types of motions, falling objects, objects moving in various fields
+o Know how to analyze energy diagrams and defining effective potential
+o Have knowledge about small oscillations, Harmonic oscillator potential and equations of motion
+o Have knowledge about transformation of variables that allow for analytical solutions, example two-body problems
+o Have knowledge about central forces and two-body problems, center-of-mass and relative coordinates as reference frame
+o Have knowledge about two-body scattering problems, classical scattering cross section
+o Have knowledge about Variational calculus and Lagrangian formalism
+o Know how to derive the equations of motion from the Lagrangian formalism with and without constraints (Lagrangian multipliers)
+
+!split
+=====  Competences and Skills =====
+
+To solve many of these problems, we have through different midterms and weekly exercises studied many systems numerically, from falling objects with and without friction/air resistance, small oscillations (harmonic oscillator), gravitational problems and other central force problems, rotations and the classical pendulum. To solve these systems, we have applied different algorithms for solving differential equations. These are
+o Euler-Cromer and Velocity-Verlet as energy conserving algorithms (time-independent forces)
+o Runge-Kutta family of algorithms for time-dependent forces
+We have also, in connection with for example the work-energy theorem studied methods for evaluating integrals. These are (although we never wrote codes in exercises/midterms)
+o Numerical integration using the Trapezoidal, midpoint and Simpson's rule.
+
+
+!split
+=====  Computations? Why? =====
+
+You should also have acquired skills in structuring a numerical project, as well as having developed a critical understanding of the pros and cons of the methods and an understanding of their limits and what can go wrong.  Computing means solving scientific problems using computers. It covers numerical as well as symbolic computing. Computing is also about developing an understanding of the scientific process by enhancing algorithmic thinking when solving problems.  Computing competence has
+always been a central part of the science and engineering education.
+In particular, some of the competences that are important in the development of your own understanding of
+computations, we would like to emphasize
+o derivation, verification, and implementation of algorithms
+o understanding what can go wrong with algorithms
+o overview of important, known algorithms for solving mechanics problems (To a extent large differential equations and integration)
+o understanding how algorithms are used to solve mathematical problems
+o Making science (your results) reproducible
+o algorithmic thinking for gaining deeper insights about scientific problems
+
+
+!split
+===== Procrastination... the curse of all?  =====
+FIGURE: [figures/procrast.jpg, width=700 frac=0.9]
+"Enjoy this video":"https://www.youtube.com/watch?v=arj7oStGLkU"
+
+"And research shows that procrastinating enhances creativity!!":"http://www.nytimes.com/2016/01/17/opinion/sunday/why-i-taught-myself-to-procrastinate.html?_r=0"
+
+
+!split
+===== However ... =====
+
+Since grades are due on May 5, we need to have a hard deadline for the final exam, April 30 at midnight.
+
+
 !split
 =====  Best wishes to you all and thanks so much for your heroic efforts this semester =====
 
 FIGURE: [figures/Nebbdyr2.png, width=500 frac=0.6]
+
+
+
+
+
+
+
+
